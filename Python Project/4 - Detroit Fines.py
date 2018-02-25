@@ -5,11 +5,6 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.preprocessing import MinMaxScaler
 
 
-def blight_model():
-
-    return  # Your answer here
-
-
 train = pd.read_csv("train.csv", encoding='cp1252', low_memory=False)
 y_train = train['compliance'].fillna(value=0)  # treat null as not paid
 # X_train = train[['ticket_id', 'fine_amount', 'admin_fee',
