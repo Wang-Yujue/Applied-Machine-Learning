@@ -7,7 +7,7 @@
 ### This module covers evaluation and model selection methods that you can use to help understand and optimize the performance of your machine learning models.
 ## Supervised Machine Learning - Part 2
 ### This module covers more advanced supervised learning methods that include ensembles of trees (random forests, gradient boosted trees), and neural networks (with an optional summary on deep learning). You will also learn about the critical problem of data leakage in machine learning and how to detect and avoid it.
-#### Following topics are included:
+
 ## Module 1: A simple classification task
 ## Module 2: Supervised Learning, Part I
 ### K-Nearest Neighbors
