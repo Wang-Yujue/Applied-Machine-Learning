@@ -1,7 +1,7 @@
 # Applied-Machine-Learning-in-Python
 #### Following topics are included:
 ### Module 1: A simple classification task
-### Module 2: Supervised Learning, Part I)
+### Module 2: Supervised Learning, Part I
 #### K-Nearest Neighbors
 ##### Classification
 ##### Regression
