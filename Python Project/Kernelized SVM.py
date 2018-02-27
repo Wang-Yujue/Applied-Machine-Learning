@@ -105,17 +105,5 @@ print('RBF-kernel SVC (with MinMax scaling) training set accuracy: {:.2f}'
       .format(clf.score(X_train_scaled, y_train)))
 print('RBF-kernel SVC (with MinMax scaling) test set accuracy: {:.2f}'
       .format(clf.score(X_test_scaled, y_test)))
-from sklearn.preprocessing import MinMaxScaler
-
-scaler = MinMaxScaler()
-X_train_scaled = scaler.fit_transform(X_train)
-X_test_scaled = scaler.transform(X_test)
-
-clf = SVC(C=10).fit(X_train_scaled, y_train)
-print('Breast cancer dataset (normalized with MinMax scaling)')
-print('RBF-kernel SVC (with MinMax scaling) training set accuracy: {:.2f}'
-      .format(clf.score(X_train_scaled, y_train)))
-print('RBF-kernel SVC (with MinMax scaling) test set accuracy: {:.2f}'
-      .format(clf.score(X_test_scaled, y_test)))
 
 plt.show()
