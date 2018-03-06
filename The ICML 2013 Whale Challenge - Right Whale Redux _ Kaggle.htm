@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The ICML 2013 Whale Challenge - Right Whale Redux | Kaggle</title>
+    <meta charset="utf-8" />
+    <meta name="robots" content="index, follow"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">    <meta name="theme-color" content="#008ABC" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" /><link rel="dns-prefetch" href="https://stats.g.doubleclick.net" /><link rel="dns-prefetch" href="https://js.intercomcdn.com" /><link rel="preload" href="https://az416426.vo.msecnd.net/scripts/a/ai.0.js" as=script /><link rel="dns-prefetch" href="https://kaggle2.blob.core.windows.net" />
+    <link href="/content/v/d420a040e581/kaggle/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link rel="manifest" href="/static/json/manifest.json">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic" rel='stylesheet' type='text/css'>
+<link rel="canonical" href="/Scripts/ShowScript" />                    <link rel="stylesheet" type="text/css" href="/static/assets/vendor.css?v=72f4ef2ebe4f"/>
+        <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=ccbc3f89e289"/>
+        <script>
+            
+            (function () {
+                var originalError = window.onerror;
+
+                window.onerror = function (message, url, lineNumber, columnNumber, error) {
+                    var handled = originalError && originalError(message, url, lineNumber, columnNumber, error);
+                    var blockedByCors = message && message.toLowerCase().indexOf("script error") >= 0;
+                    return handled || blockedByCors;
+                };
+            })();
+        </script>
+    <script>
+        var appInsights=window.appInsights||function(config){
+        function i(config){t[config]=function(){var i=arguments;t.queue.push(function(){t[config].apply(t,i)})}}var t={config:config},u=document,e=window,o="script",s="AuthenticatedUserContext",h="start",c="stop",l="Track",a=l+"Event",v=l+"Page",y=u.createElement(o),r,f;y.src=config.url||"https://az416426.vo.msecnd.net/scripts/a/ai.0.js";u.getElementsByTagName(o)[0].parentNode.appendChild(y);try{t.cookie=u.cookie}catch(p){}for(t.queue=[],t.version="1.0",r=["Event","Exception","Metric","PageView","Trace","Dependency"];r.length;)i("track"+r.pop());return i("set"+s),i("clear"+s),i(h+a),i(c+a),i(h+v),i(c+v),i("flush"),config.disableExceptionTracking||(r="onerror",i("_"+r),f=e[r],e[r]=function(config,i,u,e,o){var s=f&&f(config,i,u,e,o);return s!==!0&&t["_"+r](config,i,u,e,o),s}),t
+        }({
+            instrumentationKey:"5b3d6014-f021-4304-8366-3cf961d5b90f",
+            disableAjaxTracking: true
+        });
+        window.appInsights=appInsights;
+        appInsights.trackPageView();
+    </script>
+    
+    
+    
+ 
+    
+    <script>
+    window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+    ga('create', 'UA-12629138-1', 'auto');
+    ga('set', 'displayFeaturesTask', null);
+    ga('send', 'pageview');
+    </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+
+    
+<script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window,document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+    fbq("set", "autoConfig", "false", "136809193586742");
+    fbq('init', '136809193586742'); 
+    fbq('track', 'PageView');
+</script>
+<noscript>
+    <img height="1" width="1" src="https://www.facebook.com/tr?id=136809193586742&ev=PageView&noscript=1"/>
+</noscript>
+
+    
+
+    <script>
+         window.intercomSettings = {
+        app_id: "koj6gxx6",
+            name: "Wang Yujue",
+            email: "wangyujue@outlook.com",
+            created_at: 1519668067,
+            user_hash: "2f4bb257b8ab7140be54c92704c24ad80807aae08f00f2f1c2c5f618fc638fd5",
+            "last_visit_date_at": 1520351145,  
+            "is_activated": true,
+            "is_locked_out": false,
+            "points": 0,
+             "ranking": 0,
+             "tier": 0,
+             "performance_tier": 0,
+             "highest_ranking": 0,
+             "user_name": "wangyujue",
+             "display_name": "Wang Yujue",
+             "is_admin": false,
+             "experiment_group": 0,
+             "newsletter_subscriber": false,
+             "block_emails": false,
+                 
+                 "competitions_tier": 0,
+                 "competitions_tier_attained_at" : -62135596800,
+                 "kernels_tier": 0,
+                 "kernels_tier_attained_at" : -62135596800,
+                 "discussion_tier": 0,
+                 "discussion_tier_attained_at" : -62135596800,
+                 
+                              "datasets_count": 0,
+                 "last_dataset_created_at": null,
+                 "last_dataset_validation_error_at": null,
+                 "last_new_dataset_visit_at": null,
+                 "host_page_visits": 0,
+             "delete_account_reason": ""
+        };
+    </script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/koj6gxx6';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+    
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggle" />
+    <meta name="og:url" content="https://www.kaggle.com/c/the-icml-2013-whale-challenge-right-whale-redux" />
+    <meta name="og:title" content="The ICML 2013 Whale Challenge - Right Whale Redux" />
+    <meta name="og:description" content="Develop recognition solutions to detect and classify right whales for BIG data mining and exploration studies" />
+    <meta name="og:image" content="https://kaggle2.blob.core.windows.net/competitions/kaggle/3509/logos/thumb76_76.png" />
+
+
+    
+    
+
+    
+    
+
+    <script src="/static/assets/manifest.js?v=47a28ec84654"></script>
+<script src="/static/assets/vendor.js?v=68e222be216f"></script>
+</head>
+<body>
+    
+
+
+
+
+
+
+
+
+<div class="site-layout">
+        <div class="site-layout__header">
+            <div data-component-name="SiteHeaderContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script>var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({});performance && performance.mark && performance.mark("SiteHeaderContainer.componentCouldBootstrap");</script>
+        </div>
+
+    <div class="site-layout__main-content">
+        
+
+<div data-component-name="CompetitionContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script>var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"activeTab":"discussion","canonicalUrl":"/Scripts/ShowScript","competitionId":3509,"competitionType":"prediction","competitionTitle":"The ICML 2013 Whale Challenge - Right Whale Redux","briefDescription":"Develop recognition solutions to detect and classify right whales for BIG data mining and exploration studies","competitionHeaderImageUrl":"/static/images/competition-noimage.png","organizationId":null,"organizationName":null,"organizationSlug":null,"organizationThumbnailUrl":null,"hasAcceptedRules":false,"pageMessages":[],"dateEnabled":"2013-05-10T20:15:46.713Z","deadline":"2013-06-17T23:59:59Z","mergerDeadline":"2013-06-17T23:59:59Z","newEntrantDeadline":null,"rewardQuantity":500.0000,"rewardTypeName":"USD","totalTeams":129,"isTeamCountOverridden":false,"isInClass":false,"hostSegment":"research","canEdit":false,"overview":{"id":4184,"postId":19541,"content":"\u003cp style=\u0022text-align: center;\u0022\u003e\u003cimg src=\u0022https://kaggle2.blob.core.windows.net/competitions/kaggle/3509/media/right_whale.jpg\u0022 alt=\u0022Right whale\u0022 width=\u0022504\u0022 height=\u0022169\u0022 style=\u0022display: block; margin-left: auto; margin-right: auto;\u0022 /\u003e\u003cspan style=\u0022font-size: small;\u0022\u003e\u003cem\u003e(right whale illustration courtesy of Pieter Folkens, \u0026copy;2011)\u003c/em\u003e\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003eThis competition complements the previously held\u0026nbsp;\u003ca href=\u0022https://www.kaggle.com/c/whale-detection-challenge\u0022\u003eMarinexplore Whale Detection Challenge\u003c/a\u003e, in which Cornell University provided data from a ship monitoring application termed \u0022Auto Buoy\u0022, or AB Monitoring System. In the Marinexplore challenge we received solutions that exceeded 98% accuracy and will ultimately advance the process of automatically classifying North Atlantic Right Whales using the AB Monitoring Platform.\u003c/p\u003e\r\n\u003cp\u003eSince the results from the previous challenge proved so successful, we decided to extend the goals and consider applications that involve running algorithms on archival data recorded using portable hydrophone assemblies, otherwise referred to as Marine Autonomous Recording Unit (or MARU\u0026rsquo;s). Since Cornell and its partners have been using the MARU for over a decade, a sizable collection of data has been accumulated. This data spans several ocean basins and covers a variety of marine mammal species.\u003c/p\u003e\r\n\u003cp\u003eSolutions to this challenge will be ported to a High Performance Computing (HPC) platform, being developed in part through funding provided by the Office of Naval Research (ONR grant N000141210585, Dugan, Clark, LeCun and Van Parijs). Together, Cornell will combine algorithms, HPC technologies and its data archives to explore data using highly accurate measuring tools. We encourage participants who developed prior solutions (through the collaboration with Marinexplore) to test them on this data.\u003c/p\u003e\r\n\u003cp\u003e\u003cspan\u003eThe results will be presented at the\u0026nbsp;\u003c/span\u003e\u003ca href=\u0022http://sabiod.univ-tln.fr/icml2013/challenge_description.html\u0022\u003eWorkshop on Machine Learning for Bioacoustics\u003c/a\u003e\u003cspan\u003e\u0026nbsp;at ICML 2013.\u003c/span\u003e\u003c/p\u003e","mimeType":"text/html","name":"description","isPublished":false},"rules":{"id":4183,"postId":19540,"content":"\r\n\t\u003c!-- Begin Base Rules --\u003e\r\n    \u003ch3\u003eOne account per participant\u003c/h3\u003e\r\n    \u003cp\u003eYou cannot sign up to Kaggle from multiple accounts and therefore you cannot submit from multiple accounts.\u003c/p\u003e\r\n    \u003ch3\u003eNo private sharing outside teams\u003c/h3\u003e\r\n    \u003cp\u003e\r\n        Privately sharing code or data outside of teams is not permitted.\r\n        It\u0027s okay to share code if made available to all participants on the forums.\r\n    \u003c/p\u003e\r\n    \u003ch3\u003ePublic dissemination of entries\u003c/h3\u003e\r\n    \u003cp\u003eKaggle and the competition host have the right to publicly disseminate any entries or models.\u003c/p\u003e\r\n    \u003ch3\u003eOpen licensing of winners\u003c/h3\u003e\r\n    \u003cp\u003e\r\n        Winning solutions need to be made available under\r\n        \u003ca href=\u0022http://opensource.org/licenses\u0022\u003ea popular OSI-approved license\u003c/a\u003e\r\n        in order to be eligible for recognition and prize money.\r\n    \u003c/p\u003e\r\n    \u003ch3\u003eWinning solutions must be posted or linked to in the forums.\u003c/h3\u003e\r\n    \u003cp\u003e\r\n        Prizes will be awarded after the winners have posted their solutions to the competition forum.\r\n        Winners must post or link to their solutions within seven (7) days of being notified of their winning status.\r\n    \u003c/p\u003e\r\n    \u003ch3\u003eTeam Mergers\u003c/h3\u003e\r\n    \u003cp\u003e\r\n        Team mergers are allowed and can be performed by the team leader. In order to merge, the combined team must have a total submission count less than or equal to the maximum allowed as of the merge date. The maximum allowed is the number of submissions per day multiplied by the number of days the competition has been running.\u003cbr/\u003e\r\n    \u003c/p\u003e\r\n\r\n    \u003ch3\u003eTeam Limits\u003c/h3\u003e\r\n    \u003cp\u003eThere is no maximum team size.\u003c/p\u003e\r\n    \u003ch3\u003eSubmission Limits\u003c/h3\u003e\r\n    \u003cp\u003eYou may submit a maximum of 3 entries per day.\u003c/p\u003e\r\n    \u003cp\u003eYou may select up to 2 final submissions for judging.\u003c/p\u003e\r\n    \u003ch3\u003eCompetition Timeline\u003c/h3\u003e\r\n    \u003cp\u003eStart Date: \u003cstrong\u003e5/10/2013 8:15 PM UTC\u003c/strong\u003e\u003c/p\u003e\r\n    \u003cp\u003eMerger Deadline: \u003cstrong\u003eNone\u003c/strong\u003e\u003c/p\u003e\r\n    \u003cp\u003eEntry Deadline: \u003cstrong\u003eNone\u003c/strong\u003e\u003c/p\u003e\r\n    \u003cp\u003eEnd Date: \u003cstrong\u003e6/17/2013 11:59 PM UTC\u003c/strong\u003e\u003c/p\u003e\r\n\t\u003c!-- End Base Rules --\u003e\r\n\u003cp\u003eSolutions should not analyze test data prior to making predictions (i.e. semi-supervised learning is not allowed).\u003c/p\u003e","mimeType":"text/html","name":"rules","isPublished":false},"dataIntro":{"id":4188,"postId":19712,"content":"\u003cp\u003eYou are given four days of training data and three days of testing data. \u0026nbsp;The task is to assign a probability that each recording in the test set contains a right whale call (1) or noise (0).\u003c/p\u003e\r\n\u003ch2\u003eFile descriptions\u003c/h2\u003e\r\n\u003cul\u003e\r\n\u003cli\u003e\u003cstrong\u003etrain2.zip\u003c/strong\u003e\u0026nbsp;- all of the training data as .aif clips. If the file ends in \u0022_1.aif\u0022 it was labeled a whale call, if it ends in \u0022_0.aif\u0022, it was labeled noise.\u003c/li\u003e\r\n\u003cli\u003e\u003cstrong\u003etest2.zip\u003c/strong\u003e\u0026nbsp;- \u0026nbsp;all of the testing data as .aif clips. You should predict a probability for each of these files.\u003c/li\u003e\r\n\u003c/ul\u003e\r\n\u003cp\u003eTo run within hardware constraints, solutions would ideally function with limited training history, meaning the algorithm would page in no more than five previous minutes of data at a time. Since we cannot enforce this requirement in this particular competition, we provide this info for those who want to optimize on \u0022real world utility,\u0022 as opposed to AUC.\u003c/p\u003e","mimeType":"text/html","name":"data-description","isPublished":false},"evaluation":null,"prizes":null,"competitionSlug":"the-icml-2013-whale-challenge-right-whale-redux","numPrizes":2,"leaderboardPercentage":30,"hasHeaderImage":false,"hasScripts":false,"acceptRulesUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/rules/accept.json?doAccept=True","setFinalScoreSubmissionsUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/submissions/final.json","updateSubmissionUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/submissions/update.json","setTeamNameUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/team/name.json","setLeaderUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/team/leader.json","inviteToTeamUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/team/invite.json","acceptInviteUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/team/invite/accept.json","acceptTeamInviteUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/team/merge/accept.json","rejectTeamInviteUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/team/merge/reject.json","newScriptUrl":"/wangyujue/kernels/scripts/new?competitionId=3509","addImageUrl":null,"discussion":{"canDownvote":false,"dataUrl":"/forums/271/topics.json","id":271,"isRootLevel":false,"isSubscribed":false,"initialTopics":null,"paramValues":{"category":"all","kind":"all","page":1,"search":null,"group":"all","sortBy":"hot"}},"competitionThumbnailImageUrl":"https://kaggle2.blob.core.windows.net/competitions/kaggle/3509/logos/thumb76_76.png","competitionFrontPageImageUrl":"https://kaggle2.blob.core.windows.net/competitions/kaggle/3509/logos/front_page.png","submissionStatusUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/submissions/status.json","isNewTopic":false,"newTopic":{"allowAttachments":true,"authorRanking":null,"authorTier":"novice","authorType":"topic","forumId":271,"parentName":"The ICML 2013 Whale Challenge - Right Whale Redux","parentUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux"},"numScoredSubmissions":2,"maxDailySubmissions":3,"maxDailySubmissionsResetDate":"2018-03-07T00:00:00Z","remainingDailySubmissions":null,"totalSolutionRows":25468,"team":null,"maxTeamSize":null,"topicId":4865,"saveOverviewUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/overview.json","saveRulesUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/rules.json","saveDataUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/data.json","totalCompetitors":158,"totalEntries":0,"countsTowardsRanking":true,"countsTowardsTiers":true,"evaluationAlgorithm":{"id":5,"name":"Area Under Receiver Operating Characteristic Curve","description":"Measures discrimination. Calculates how well an algorithm separates true positives from false positives. Overall good metric for classification problems. Has range [0.5, 1.0]","submissionFileFormatId":null,"competitionId":null,"isMax":true,"requiresSameRowCountInSubmissionAndSolution":true},"disbandTeamUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/team/disband.json","submissionUploadUrl":"/blobs/inbox/submissions","submissionSubmitUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/submission.json","totalDiscussions":11,"totalKernels":0,"allowPrivateLeaderboardDisplay":true,"isCreatingCompetition":false,"pages":[{"id":4184,"postId":19541,"content":"\u003cp style=\u0022text-align: center;\u0022\u003e\u003cimg src=\u0022https://kaggle2.blob.core.windows.net/competitions/kaggle/3509/media/right_whale.jpg\u0022 alt=\u0022Right whale\u0022 width=\u0022504\u0022 height=\u0022169\u0022 style=\u0022display: block; margin-left: auto; margin-right: auto;\u0022 /\u003e\u003cspan style=\u0022font-size: small;\u0022\u003e\u003cem\u003e(right whale illustration courtesy of Pieter Folkens, \u0026copy;2011)\u003c/em\u003e\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003eThis competition complements the previously held\u0026nbsp;\u003ca href=\u0022https://www.kaggle.com/c/whale-detection-challenge\u0022\u003eMarinexplore Whale Detection Challenge\u003c/a\u003e, in which Cornell University provided data from a ship monitoring application termed \u0022Auto Buoy\u0022, or AB Monitoring System. In the Marinexplore challenge we received solutions that exceeded 98% accuracy and will ultimately advance the process of automatically classifying North Atlantic Right Whales using the AB Monitoring Platform.\u003c/p\u003e\r\n\u003cp\u003eSince the results from the previous challenge proved so successful, we decided to extend the goals and consider applications that involve running algorithms on archival data recorded using portable hydrophone assemblies, otherwise referred to as Marine Autonomous Recording Unit (or MARU\u0026rsquo;s). Since Cornell and its partners have been using the MARU for over a decade, a sizable collection of data has been accumulated. This data spans several ocean basins and covers a variety of marine mammal species.\u003c/p\u003e\r\n\u003cp\u003eSolutions to this challenge will be ported to a High Performance Computing (HPC) platform, being developed in part through funding provided by the Office of Naval Research (ONR grant N000141210585, Dugan, Clark, LeCun and Van Parijs). Together, Cornell will combine algorithms, HPC technologies and its data archives to explore data using highly accurate measuring tools. We encourage participants who developed prior solutions (through the collaboration with Marinexplore) to test them on this data.\u003c/p\u003e\r\n\u003cp\u003e\u003cspan\u003eThe results will be presented at the\u0026nbsp;\u003c/span\u003e\u003ca href=\u0022http://sabiod.univ-tln.fr/icml2013/challenge_description.html\u0022\u003eWorkshop on Machine Learning for Bioacoustics\u003c/a\u003e\u003cspan\u003e\u0026nbsp;at ICML 2013.\u003c/span\u003e\u003c/p\u003e","mimeType":"text/html","name":"description","isPublished":true},{"id":4186,"postId":19543,"content":"\u003cp\u003eSubmissions are judged on\u0026nbsp;\u003ca href=\u0022http://en.wikipedia.org/wiki/Receiver_operating_characteristic\u0022\u003earea under the ROC curve\u003c/a\u003e.\u003cspan\u003e\u0026nbsp;\u003c/span\u003e\u003c/p\u003e\r\n\u003cp\u003eIn Matlab (using the stats toolbox):\u003c/p\u003e\r\n\u003cpre\u003e[~, ~, ~, auc ] = perfcurve(true_labels, predictions, 1);\r\n\u003c/pre\u003e\r\n\u003cp\u003eIn R (using the verification package):\u003c/p\u003e\r\n\u003cpre\u003eauc = roc.area(true_labels, predictions)\r\n\u003c/pre\u003e\r\n\u003cp\u003eIn python (using the metrics module of scikit-learn):\u003c/p\u003e\r\n\u003cpre\u003efpr, tpr, thresholds = metrics.roc_curve(true_labels, predictions, pos_label=1)\r\nauc = metrics.auc(fpr,tpr)\u003c/pre\u003e\r\n\u003ch2\u003eSubmission File\u003c/h2\u003e\r\n\u003cp\u003eFor every recording in the test set, submission files should contain two columns: clip and probability. The submission file should have a header.\u003c/p\u003e\r\n\u003cpre\u003eclip,probability\r\n20090404_000000_012s0ms_Test0.aif,0\r\n20090404_000000_042s6ms_Test1.aif,0\r\n20090404_000000_064s8ms_Test2.aif,0\r\n20090404_000000_082s3ms_Test3.aif,0\r\n20090404_000000_095s0ms_Test4.aif,0\u003c/pre\u003e\r\n\u003cpre\u003e\u003c/pre\u003e","mimeType":"text/html","name":"evaluation","isPublished":true},{"id":4185,"postId":19542,"content":"\u003cul\u003e\r\n\u003cli\u003e\u003cspan style=\u0022line-height: 1.4em;\u0022\u003eFirst place - $350\u003c/span\u003e\u003c/li\u003e\r\n\u003cli\u003e\u003cspan style=\u0022line-height: 1.4em;\u0022\u003eSecond place - $150\u003c/span\u003e\u003c/li\u003e\r\n\u003c/ul\u003e","mimeType":"text/html","name":"prizes","isPublished":true}],"files":[{"id":1560,"name":"sampleSubmission.csv","description":null,"totalBytes":1055517,"url":"/c/the-icml-2013-whale-challenge-right-whale-redux/download/sampleSubmission.csv","previewUrl":null,"supersededById":null,"dateCreated":"2013-05-20T19:19:02.807Z"},{"id":1561,"name":"test2.zip","description":null,"totalBytes":97237635,"url":"/c/the-icml-2013-whale-challenge-right-whale-redux/download/test2.zip","previewUrl":null,"supersededById":null,"dateCreated":"2013-05-20T19:19:23.63Z"},{"id":1562,"name":"train2.zip","description":null,"totalBytes":194851396,"url":"/c/the-icml-2013-whale-challenge-right-whale-redux/download/train2.zip","previewUrl":null,"supersededById":null,"dateCreated":"2013-05-20T19:20:22.847Z"}],"teamInboundMergeRequests":null,"teamOutboundMergeRequests":null,"leaderboardTeaser":[{"teamId":43019,"rank":1,"change":0,"medal":null,"teamName":"SluiceBox","teamMembers":[{"profileUrl":"/scottdobson","thumbnailUrl":"https://kaggle2.blob.core.windows.net/avatars/thumbnails/5978.jpg","tier":"master","displayName":"Scott Dobson"},{"profileUrl":"/nmkridler","thumbnailUrl":"https://kaggle2.blob.core.windows.net/avatars/thumbnails/7947-gr.jpg","tier":"master","displayName":"Nick Kridler"}],"score":"0.99379","entries":16,"lastSubmission":"2013-06-16T21:17:16.317Z","sourceKernelName":null,"sourceKernelUrl":null},{"teamId":42947,"rank":2,"change":2,"medal":null,"teamName":"Swedish Chef","teamMembers":[{"profileUrl":"/chefele","thumbnailUrl":"https://kaggle2.blob.core.windows.net/avatars/thumbnails/1602-fb.jpg","tier":"grandmaster","displayName":"Christopher Hefele"}],"score":"0.99302","entries":12,"lastSubmission":"2013-06-17T21:42:17.367Z","sourceKernelName":null,"sourceKernelUrl":null},{"teamId":43160,"rank":3,"change":0,"medal":null,"teamName":"Daniel Nouri","teamMembers":[{"profileUrl":"/dnouri","thumbnailUrl":"https://kaggle2.blob.core.windows.net/avatars/thumbnails/59905-gr.jpg","tier":"master","displayName":"Daniel Nouri"}],"score":"0.99189","entries":23,"lastSubmission":"2013-06-17T22:17:01.027Z","sourceKernelName":null,"sourceKernelUrl":null},{"teamId":44779,"rank":4,"change":5,"medal":null,"teamName":"Anything","teamMembers":[{"profileUrl":"/anything1","thumbnailUrl":"https://kaggle2.blob.core.windows.net/avatars/thumbnails/default-thumb.png","tier":"contributor","displayName":"Anything"}],"score":"0.99187","entries":10,"lastSubmission":"2013-06-17T03:16:29.833Z","sourceKernelName":null,"sourceKernelUrl":null},{"teamId":46797,"rank":5,"change":2,"medal":null,"teamName":"suli","teamMembers":[{"profileUrl":"/kevinli2","thumbnailUrl":"https://kaggle2.blob.core.windows.net/avatars/thumbnails/103755-gr.jpg","tier":"contributor","displayName":"Kevin Li"},{"profileUrl":"/eddypeihaosu","thumbnailUrl":"https://kaggle2.blob.core.windows.net/avatars/thumbnails/default-thumb.png","tier":"contributor","displayName":"Eddy Pei-Hao Su"}],"score":"0.99153","entries":9,"lastSubmission":"2013-06-17T02:43:08.637Z","sourceKernelName":null,"sourceKernelUrl":null},{"teamId":43772,"rank":6,"change":4,"medal":null,"teamName":"Wayne Zhang","teamMembers":[{"profileUrl":"/waynezhang","thumbnailUrl":"https://kaggle2.blob.core.windows.net/avatars/thumbnails/30864-gr.jpg","tier":"grandmaster","displayName":"Wayne Zhang"}],"score":"0.99118","entries":25,"lastSubmission":"2013-06-17T13:10:04.863Z","sourceKernelName":null,"sourceKernelUrl":null},{"teamId":45618,"rank":7,"change":-2,"medal":null,"teamName":"Brian Cheung","teamMembers":[{"profileUrl":"/briancheung","thumbnailUrl":"https://kaggle2.blob.core.windows.net/avatars/thumbnails/default-thumb.png","tier":"master","displayName":"Brian Cheung"}],"score":"0.99106","entries":34,"lastSubmission":"2013-06-17T23:50:42.54Z","sourceKernelName":null,"sourceKernelUrl":null},{"teamId":43929,"rank":8,"change":-2,"medal":null,"teamName":"Team Name","teamMembers":[{"profileUrl":"/davidledbetter","thumbnailUrl":"https://kaggle2.blob.core.windows.net/avatars/thumbnails/85480-gp.jpg","tier":"master","displayName":"David Ledbetter"},{"profileUrl":"/jonwilliams","thumbnailUrl":"https://kaggle2.blob.core.windows.net/avatars/thumbnails/89672-gr.jpg","tier":"master","displayName":"Jon Williams"},{"profileUrl":"/kristinabarkume","thumbnailUrl":"https://kaggle2.blob.core.windows.net/avatars/thumbnails/90753-gr.jpg","tier":"master","displayName":"Kristina Barkume"}],"score":"0.99056","entries":34,"lastSubmission":"2013-06-17T19:39:23.303Z","sourceKernelName":null,"sourceKernelUrl":null}],"discussionTeaser":[{"title":"The Leakage (and how it was fixed) ","itemUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/discussion/4865#latest-256610","totalVotes":0,"totalReplies":2,"date":"2017-12-12T11:22:06.34Z","userDisplayName":"Rhodium Beng","userUrl":"/rhodiumbeng"},{"title":"Really Curious what worked for people","itemUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/discussion/4871#latest-26090","totalVotes":0,"totalReplies":12,"date":"2013-06-21T16:58:14.597Z","userDisplayName":"Ryan Kiros","userUrl":"/ryankiros"},{"title":"model submission","itemUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/discussion/4860#latest-25850","totalVotes":1,"totalReplies":1,"date":"2013-06-18T01:56:26.183Z","userDisplayName":"RightLeft","userUrl":"/rightleft"},{"title":"private leaderboard","itemUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/discussion/4866#latest-25844","totalVotes":0,"totalReplies":1,"date":"2013-06-18T00:58:33.817Z","userDisplayName":"Ryan Keisler","userUrl":"/rkeisler"},{"title":"probability values?","itemUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/discussion/4696#latest-25073","totalVotes":1,"totalReplies":1,"date":"2013-06-03T04:00:01.013Z","userDisplayName":"RightLeft","userUrl":"/rightleft"}],"kernelTeaser":[],"datasetVersions":[],"submissionsAreDisabled":true,"hasLeaderboard":true,"finalLeaderboardHasBeenVerified":true,"witholdFinalLeaderboardUntilItHasBeenVerified":false,"isPrivate":false,"publicLeaderboardMessage":null,"privateLeaderboardMessage":null,"disablePrizeIndicator":false,"hasKernels":false,"hasKernelsEnabled":false,"hasHostEnabled":false,"benchmarks":null,"totalSolutionColumns":null,"hasSolutionFile":true,"hasSampleSubmissionFile":false,"userRankMultiplier":1.0,"solutionUploadUrl":null,"submissionDetailsUpdateUrl":null,"submissionDeleteUrl":null,"benchmarkSubmitUrl":null,"needsPhoneVerification":true,"scoringIsMax":true,"rawDataUrl":"/c/3509/publicleaderboarddata.zip","canSubmitModel":false,"privateLeaderboardIsPublic":true,"acceptModelUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux/team/model/upload.json","modelFile":null,"newNotebookUrl":"/wangyujue/kernels/notebooks/new?competitionId=3509","finalSubmissionIds":[],"mySubmissionsCount":null,"submissionsPage":1,"submissionsSortBy":"date","submissionsGroup":"all","mostRecentSubmissionStatus":null,"isCompetitionHost":false,"allowAnonymousTeams":false,"allowTeamMergers":true,"hostSegments":[],"hostSegmentTitle":"Research","canParticipate":true,"privacyOptions":[{"value":"public","label":"Public"},{"value":"limited","label":"Limited"},{"value":"private","label":"Private"}],"isCompetitionPending":false,"isCompetitionEnded":true,"competitionHasLaunched":true,"competitionHasEnded":true,"canSeeNewWorldInClassCreation":true,"shareToken":null,"competitionPrivacy":"public","ownerTwitter":null,"externalCompetitionThumbnailImageUrl":"https://kaggle2.blob.core.windows.net/competitions/kaggle/3509/logos/thumb76_76.png","competitionUrl":"/c/the-icml-2013-whale-challenge-right-whale-redux","mergerDeadlineHasPassed":true,"categories":{"categories":[{"id":null,"name":"auc","fullPath":null,"listingUrl":null,"tagUrl":null,"fontAwesomeIcon":null,"description":"Measures discrimination. Calculates how well an algorithm separates true positives from false positives. Overall good metric for classification problems. Has range [0.5, 1.0]","isInherited":true,"datasetCount":0,"competitionCount":0,"scriptCount":0,"totalCount":0},{"id":null,"name":"small","fullPath":null,"listingUrl":null,"tagUrl":null,"fontAwesomeIcon":null,"description":"Competition data: small (50MB to 500MB)","isInherited":true,"datasetCount":0,"competitionCount":0,"scriptCount":0,"totalCount":0}],"type":"competition"},"competitionHostClaims":{"readSettings":false,"writeSettings":false,"writeDescriptions":false,"writeDeadline":false,"readSubmissions":false,"writeSubmissions":false,"invalidateSubmissions":false,"rescoreSubmissions":false,"readEvaluation":false,"writeEvaluation":false,"writeTeamVisibility":false,"updateCategory":false,"launchCompetition":false,"writeBenchmarks":false,"writeTeamMergers":false},"newEntrantDeadlineHasPassed":false,"onlyAllowKernelSubmissions":false,"kernelFilters":null,"requiresSameRowCountInSubmissionAndSolution":true});performance && performance.mark && performance.mark("CompetitionContainer.componentCouldBootstrap");</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            preferredFont: "TeX",
+            availableFonts: ["STIX", "TeX"],
+            linebreaks: {
+                automatic: true
+            },
+            EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+        },
+        tex2jax: {
+            inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+            displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+            processEscapes: true,
+            ignoreClass: "tex2jax_ignore|dno"
+        },
+        TeX: {
+            noUndefined: {
+                attributes: {
+                    mathcolor: "red",
+                    mathbackground: "#FFEEEE",
+                    mathsize: "90%"
+                }
+            }
+        },
+        Macros: {
+            href: "{}"
+        },
+        skipStartupTypeset: false,
+        messageStyle: "none"
+    });
+</script>
+
+<script type="text/javascript" async crossorigin="anonymous" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+    </div>
+
+        <div class="site-layout__footer">
+            <footer class="site-footer">
+    <div class="site-footer__content">
+        <div class="site-footer__copyright">
+            <span>&copy; 2018 Kaggle Inc</span>
+        </div>
+        <nav class="site-footer__nav">
+            <a href="/team">Our Team</a>
+            <a href="/terms">Terms</a>
+            <a href="/privacy">Privacy</a>
+            <a href="/contact">Contact/Support</a>
+        </nav>
+        <nav class="site-footer__social">
+            <div data-component-name="SocialIcons" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script>var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push();performance && performance.mark && performance.mark("SocialIcons.componentCouldBootstrap");</script>
+        </nav>
+    </div>
+</footer>
+
+        </div>
+</div>
+
+
+
+<script type="text/javascript">
+    var Kaggle = Kaggle || {};
+
+    Kaggle.Current = {
+        userId: 1670748,
+        userProfileUrl: '/wangyujue',
+        userDisplayNameEscaped: 'Wang Yujue',
+        userThumbnailUrl: 'https://kaggle2.blob.core.windows.net/avatars/thumbnails/1670748-fb.jpg',
+        userEmail: 'wangyujue@outlook.com',
+        userIsPhoneVerified: false,
+        userName: 'wangyujue',
+        tier: 'Novice',
+        antiForgeryToken: 'Q9y7o4GtnI17JY3_FJjaRrMqTJo6e6elUy_Kh6rjKKUICUKXLHkC079XDCvRXbseW7fyn-w3F84N_f7KGq2t43bajcw1',
+        isAnonymous: false,
+        isFullScreen: false,
+        
+        
+        
+        
+        
+        
+        
+        
+    }
+        Kaggle.Current.log = function(){};
+        Kaggle.Current.warn = function(){};
+    var decodeUserDisplayName = function () {
+        var escapedUserDisplayName = Kaggle.Current.userDisplayNameEscaped || "";
+        try {
+          var textVersion = new DOMParser().parseFromString(escapedUserDisplayName, "text/html").documentElement.textContent;
+          if (textVersion) {
+              return textVersion;
+          }
+        } catch(ex) {}
+        
+        return escapedUserDisplayName;
+    }
+    Kaggle.Current.userDisplayName = decodeUserDisplayName();
+</script>
+
+
+
+
+
+<script type="text/javascript">
+    var Kaggle = Kaggle || {};
+    Kaggle.PageMessages = [];
+</script>
+
+
+<script src="/content/v/5dbea6ee9ce1/shared/js/kaggle.prism.min.js"></script>
+
+
+
+
+
+
+
+
+
+    <!-- Cheers, RD00155D488584p. -->
+
+    <script src="/static/assets/app.js?v=51d7c9251894"></script>
+    
+        <script>
+            (function() {
+                if ('serviceWorker' in navigator) {
+                    
+                    navigator.serviceWorker.register("/static/assets/service-worker.js").then(function(reg) {
+                        
+                        reg.onupdatefound = function() {
+                            
+                            var installingWorker = reg.installing;
+                            installingWorker.onstatechange = function() {
+                                switch (installingWorker.state) {
+                                case 'installed':
+                                    if (navigator.serviceWorker.controller) {
+                                        
+                                        console.log('New or updated content is available.');
+                                    } else {
+                                        
+                                        console.log('Content is now available offline!');
+                                    }
+                                    break;
+                                case 'redundant':
+                                    console.error('The installing service worker became redundant.');
+                                    break;
+                                }
+                            };
+                        };
+                    }).catch(function(e) {
+                      console.error('Error during service worker registration:', e);
+                    });
+                }
+            })();
+        </script>
+</body>
+</html>

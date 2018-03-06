@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js ie6 oldie" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js ie7 oldie" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js ie8 oldie" lang="en-US" prefix="og: http://ogp.me/ns#"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns#"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8"/><script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="profile" href="http://gmpg.org/xfn/11"/>
+    <link rel="pingback" href="https://devblogs.nvidia.com/xmlrpc.php"/>
+  
+<!-- This site is optimized with the Yoast SEO plugin v5.9.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>Deep Learning in a Nutshell: Core Concepts</title>
+<meta name="description" content="An intuitive and gentle introduction to deep learning. Covers the most important deep learning concepts, giving an understanding of each concept rather than mathematical and theoretical details."/>
+<link rel="canonical" href="https://devblogs.nvidia.com/deep-learning-nutshell-core-concepts/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Deep Learning in a Nutshell: Core Concepts" />
+<meta property="og:description" content="An intuitive and gentle introduction to deep learning. Covers the most important deep learning concepts, giving an understanding of each concept rather than mathematical and theoretical details." />
+<meta property="og:url" content="https://devblogs.nvidia.com/deep-learning-nutshell-core-concepts/" />
+<meta property="og:site_name" content="NVIDIA Developer Blog" />
+<meta property="article:publisher" content="https://www.facebook.com/NVIDIA/" />
+<meta property="article:tag" content="cuDNN" />
+<meta property="article:tag" content="Deep Learning" />
+<meta property="article:tag" content="Deep Neural Networks" />
+<meta property="article:tag" content="Machine Learning" />
+<meta property="article:tag" content="Neural Networks" />
+<meta property="article:section" content="Artificial Intelligence" />
+<meta property="article:published_time" content="2015-11-03T17:50:53-08:00" />
+<meta property="article:modified_time" content="2018-01-14T18:12:46-08:00" />
+<meta property="og:updated_time" content="2018-01-14T18:12:46-08:00" />
+<meta property="og:image" content="https://devblogs.nvidia.com/wp-content/uploads/2015/08/DL_dog_340x340.jpg" />
+<meta property="og:image:secure_url" content="https://devblogs.nvidia.com/wp-content/uploads/2015/08/DL_dog_340x340.jpg" />
+<meta property="og:image:width" content="340" />
+<meta property="og:image:height" content="340" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:description" content="An intuitive and gentle introduction to deep learning. Covers the most important deep learning concepts, giving an understanding of each concept rather than mathematical and theoretical details." />
+<meta name="twitter:title" content="Deep Learning in a Nutshell: Core Concepts" />
+<meta name="twitter:site" content="@gpucomputing" />
+<meta name="twitter:image" content="https://devblogs.nvidia.com/wp-content/uploads/2015/08/DL_dog_340x340.jpg" />
+<meta name="twitter:creator" content="@Tim_Dettmers" />
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"WebSite","@id":"#website","url":"https:\/\/devblogs.nvidia.com\/","name":"NVIDIA Parallel Forall","alternateName":"NVIDIA Accelerated Computing Developer Blog","potentialAction":{"@type":"SearchAction","target":"https:\/\/devblogs.nvidia.com\/?s={search_term_string}","query-input":"required name=search_term_string"}}</script>
+<script type='application/ld+json'>{"@context":"http:\/\/schema.org","@type":"Organization","url":"https:\/\/devblogs.nvidia.com\/deep-learning-nutshell-core-concepts\/","sameAs":["https:\/\/www.facebook.com\/NVIDIA\/","https:\/\/www.linkedin.com\/company-\u2026","https:\/\/www.youtube.com\/user\/nvidia","https:\/\/twitter.com\/gpucomputing"],"@id":"#organization","name":"NVIDIA Corporation","logo":"https:\/\/devblogs.nvidia.com\/parallelforall\/wp-content\/uploads\/2017\/01\/NVLogo_2D.png"}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//devblogs.nvidia.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel='dns-prefetch' href='//platform-api.sharethis.com' />
+<link rel='dns-prefetch' href='//secure.gravatar.com' />
+<link rel='dns-prefetch' href='//unpkg.com' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="NVIDIA Developer Blog &raquo; Feed" href="https://devblogs.nvidia.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="NVIDIA Developer Blog &raquo; Comments Feed" href="https://devblogs.nvidia.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="NVIDIA Developer Blog &raquo; Deep Learning in a Nutshell: Core Concepts Comments Feed" href="https://devblogs.nvidia.com/deep-learning-nutshell-core-concepts/feed/" />
+<meta property="og:image" content="https://devblogs.nvidia.com/wp-content/uploads/2015/08/DL_dog_340x340.jpg"/>
+<!-- This site uses the Google Analytics by MonsterInsights plugin v6.2.6 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+		var disableStr = 'ga-disable-UA-1273456-64';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-1273456-64', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2.3\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/devblogs.nvidia.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.9.1"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55358,56794,8205,9794,65039],[55358,56794,8203,9794,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='easy_load_more-frontend-css'  href='https://devblogs.nvidia.com/wp-content/plugins/easy-load-more/assets/css/frontend.css?ver=1.0.0' type='text/css' media='all' />
+<style id='easy_load_more-frontend-inline-css' type='text/css'>
+.elm-button { background: #21759B; color: #FFFFFF; }
+.elm-button:hover, .elm-button:active, .elm-button:focus { background: #4d91af; }
+.elm-loading-icon { fill: #FFFFFF; stroke: #FFFFFF; }
+
+</style>
+<link rel='stylesheet' id='share-this-share-buttons-sticky-css'  href='https://devblogs.nvidia.com/wp-content/plugins/sharethis-share-buttons/css/mu-style.css?ver=4.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='sidr-style-css'  href='https://devblogs.nvidia.com/wp-content/plugins/wp-sidr/stylesheets/jquery.sidr.dark.css?ver=4.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='bootstrap-css'  href='https://devblogs.nvidia.com/wp-content/themes/parallel-forall/assets/css/bootstrap/css/bootstrap.min.css?ver=0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='styles-css'  href='https://devblogs.nvidia.com/wp-content/themes/parallel-forall/assets/css/style.css?ver=0.2' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-styles-css'  href='https://devblogs.nvidia.com/wp-content/themes/parallel-forall/css/custom.css?ver=4.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='font-awesome-css'  href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css?ver=4.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://devblogs.nvidia.com/wp-content/plugins/jetpack/css/jetpack.css?ver=5.6' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","is_debug_mode":"false","download_extensions":"doc,exe,js,pdf,ppt,tgz,zip,xls,gz,targz","inbound_paths":"","home_url":"https:\/\/devblogs.nvidia.com","track_download_as":"event","internal_label":"int","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://devblogs.nvidia.com/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=6.2.6'></script>
+<script type='text/javascript' src='https://devblogs.nvidia.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='https://devblogs.nvidia.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a5be45672b70f00137efeb7&#038;product=inline-share-buttons-wp'></script>
+<script type='text/javascript' src='https://devblogs.nvidia.com/wp-content/plugins/wp-sidr/js/jquery.sidr.min.js'></script>
+<script type='text/javascript' src='https://devblogs.nvidia.com/wp-content/themes/parallel-forall/assets/js/modernizr-2.5.3.min.js?ver=0.2'></script>
+<script type='text/javascript' src='https://devblogs.nvidia.com/wp-content/themes/parallel-forall/assets/js/jquery.placeholder.min.js?ver=0.2'></script>
+<script type='text/javascript' src='https://devblogs.nvidia.com/wp-content/themes/parallel-forall/assets/css/bootstrap/js/bootstrap.min.js?ver=0.2'></script>
+<link rel='https://api.w.org/' href='https://devblogs.nvidia.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://devblogs.nvidia.com/xmlrpc.php?rsd" />
+
+<link rel='shortlink' href='https://wp.me/p9zsGv-1zN' />
+<link rel="alternate" type="application/json+oembed" href="https://devblogs.nvidia.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdevblogs.nvidia.com%2Fdeep-learning-nutshell-core-concepts%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://devblogs.nvidia.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdevblogs.nvidia.com%2Fdeep-learning-nutshell-core-concepts%2F&#038;format=xml" />
+<script type="text/javascript">
+	window._zem_rp_post_id = '6063';
+	window._zem_rp_thumbnails = false;
+	window._zem_rp_post_title = 'Deep+Learning+in+a+Nutshell%3A+Core+Concepts';
+	window._zem_rp_post_tags = ['neural+networks', 'cudnn', 'deep+learning', 'deep+neural+networks', 'machine+learning', 'artificial+intelligence', '4a', 'network', 'data', 'learn', 'train', 'digest', 'glossari', 'seri', 'mathemat', 'deep', 'style', 'cover', 'machin', '3a', 'write'];
+	window._zem_rp_static_base_url = 'https://content.zemanta.com/static/';
+	window._zem_rp_wp_ajax_url = 'https://devblogs.nvidia.com/wp-admin/admin-ajax.php';
+	window._zem_rp_plugin_version = '1.14';
+	window._zem_rp_num_rel_posts = '4';
+</script>
+<link rel="stylesheet" href="https://devblogs.nvidia.com/wp-content/plugins/related-posts-by-zemanta/static/themes/modern.css?version=1.14" />
+<style type="text/css">
+.related_post_title {
+}
+ul.related_post {
+}
+ul.related_post li {
+}
+ul.related_post li a {
+}
+ul.related_post li img {
+}</style>
+<script src="//assets.adobedtm.com/b92787824f2e0e9b68dc2e993f9bd995339fe417/satelliteLib-7ba51e58dc61bcb0e9311aadd02a0108ab24cc6c.js"></script>
+	<!--wp code prettify-->
+<link rel='dns-prefetch' href='//v0.wordpress.com'/>
+<link rel='dns-prefetch' href='//widgets.wp.com'/>
+<link rel='dns-prefetch' href='//s0.wp.com'/>
+<link rel='dns-prefetch' href='//0.gravatar.com'/>
+<link rel='dns-prefetch' href='//1.gravatar.com'/>
+<link rel='dns-prefetch' href='//2.gravatar.com'/>
+<style type='text/css'>img#wpstats{display:none}</style>			<link rel="stylesheet" type="text/css" id="wp-custom-css" href="https://devblogs.nvidia.com/?custom-css=0cf7488464" />
+		</head>
+<body class="post-template-default single single-post postid-6063 single-format-standard">
+  <div class="wrapper">
+    <div class="content">
+
+<div id="page" class="hfeed">
+  <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header" style="">
+            <div class="logo-header">
+                <a href="https://developer.nvidia.com/"><img
+                            alt="NVIDIA Accelerated Computing" height="21"
+                            src="https://devblogs.nvidia.com/wp-content/themes/parallel-forall/assets/img/nvidia.png"
+                            width="112"></a>
+                <a href="https://developer.nvidia.com/"
+                   class="title accelerated">Developer</a>
+            </div>
+        </div>
+        <div class="navbar-login" id="navbar-login" style="">
+            <ul class="navbar-margin navbar-right navbar-margin-media login-nav">
+                <li class="search" id="search-top">
+
+                    <div class="wrap-search-field">
+                        <a href="#"
+                           id="trigger-search-top"
+                           class="hidden-xs">
+                            <i class="fa fa-search"></i>
+                        </a>
+                        <a href="#"
+                           id="trigger-search-top-mobile"
+                           class="hidden-lg hiddem-md hidden-sm">
+                            <i class="fa fa-search"></i>
+                        </a>
+                        <div class="search-form form-field"
+                             id="search-top-form">
+                            <form action="https://devblogs.nvidia.com/"
+                                  accept-charset="UTF-8" method="get"
+                                  id="search-theme-form-input">
+                                <div>
+                                    <div id="search" class="container-inline">
+                                        <div class=" form-type-textfield form-item-search-theme-form form-item form-group">
+                                            <div class="input">
+                                                <input type="text"
+                                                       placeholder="Search..."
+                                                       name="search_theme_form"
+                                                       id="search-top-bar"
+                                                       value=""
+                                                       title="Enter the terms you wish to search for."
+                                                       class="form-text form-control "
+                                                       style="">
+                                            </div>
+                                        </div>
+                                        <input type="hidden"
+                                               name="form_build_id"
+                                               id="form-psuQ7x3mMxCYiM5jWNkM_GhZlUH-jE68gGh2xJ6dG4U"
+                                               value="form-psuQ7x3mMxCYiM5jWNkM_GhZlUH-jE68gGh2xJ6dG4U">
+                                        <input type="hidden" name="form_id"
+                                               id="edit-search-theme-form"
+                                               value="search_theme_form">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="wrap-search-checkbox">
+                        <div class="search-form form-checkbox"
+                             id="search-top-form">
+                            <form action="https://devblogs.nvidia.com/"
+                                  accept-charset="UTF-8" method="get"
+                                  id="search-theme-form">
+                                <div>
+                                    <div id="search" class="container-inline">
+                                        <div class=" form-type-textfield form-item-search-theme-form form-item form-group">
+                                            <div class="input">
+                                                <div id="cuda-search-wrapper">
+                                                    <input type="checkbox"
+                                                           id="cuda-search"
+                                                           name="cuda-search"
+                                                           value="1"> <label
+                                                            for="cuda-search">Search NVIDIA Developer</label>
+                                                </div>
+                                                <input type="hidden" id="s"
+                                                       name="s" value="">
+                                            </div>
+                                        </div>
+                                        <input type="hidden"
+                                               name="form_build_id"
+                                               id="form-psuQ7x3mMxCYiM5jWNkM_GhZlUH-jE68gGh2xJ6dG4U"
+                                               value="form-psuQ7x3mMxCYiM5jWNkM_GhZlUH-jE68gGh2xJ6dG4U">
+                                        <input type="hidden" name="form_id"
+                                               id="edit-search-theme-form"
+                                               value="search_theme_form">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="cuda-program-link">
+                    <a href="https://developer.nvidia.com/accelerated-computing-developer">Join                    </a>
+                </li>
+                <li>
+                    <a href="https://developer.nvidia.com/user">Login</a>
+                </li>
+            </ul>
+        </div>
+
+        <!--TESTING-->
+        <div class="mobile-search-field hidden-lg hidden-md hidden-sm">
+          <div class="wrap-search-field-mobile">
+            <div class="search-form-mobile form-field"
+                 id="search-top-form-mobile">
+              <a href="#"
+                 id="trigger-search-top-mobile-active">
+                  <i class="fa fa-search"></i>
+              </a>
+                <form action="https://devblogs.nvidia.com/"
+                      accept-charset="UTF-8" method="get"
+                      id="search-theme-form-input-mobile">
+                    <div>
+                        <div id="search" class="container-inline">
+                            <div class=" form-type-textfield form-item-search-theme-form form-item form-group">
+                                <div class="input">
+                                    <input type="text"
+                                           placeholder="Search..."
+                                           name="search_theme_form"
+                                           id="search-top-bar-mobile"
+                                           value=""
+                                           title="Enter the terms you wish to search for."
+                                           class="form-text form-control "
+                                           style="">
+                                </div>
+                            </div>
+                            <input type="hidden"
+                                   name="form_build_id"
+                                   id="form-psuQ7x3mMxCYiM5jWNkM_GhZlUH-jE68gGh2xJ6dG4U"
+                                   value="form-psuQ7x3mMxCYiM5jWNkM_GhZlUH-jE68gGh2xJ6dG4U">
+                            <input type="hidden" name="form_id"
+                                   id="edit-search-theme-form"
+                                   value="search_theme_form">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="wrap-search-checkbox-mobile">
+              <div class="search-form form-checkbox"
+                   id="search-top-form">
+                  <form action="https://devblogs.nvidia.com/"
+                        accept-charset="UTF-8" method="get"
+                        id="search-theme-form">
+                      <div>
+                          <div id="search" class="container-inline">
+                              <div class=" form-type-textfield form-item-search-theme-form form-item form-group">
+                                  <div class="input">
+                                      <div id="cuda-search-wrapper-mobile">
+                                          <input type="checkbox"
+                                                 id="cuda-search-mobile"
+                                                 name="cuda-search-mobile"
+                                                 value="1">
+                                          <label for="cuda-search-mobile">Search NVIDIA Developer</label>
+                                      </div>
+                                      <input type="hidden" id="s"
+                                             name="s" value="">
+                                  </div>
+                              </div>
+                              <input type="hidden"
+                                     name="form_build_id"
+                                     id="form-psuQ7x3mMxCYiM5jWNkM_GhZlUH-jE68gGh2xJ6dG4U"
+                                     value="form-psuQ7x3mMxCYiM5jWNkM_GhZlUH-jE68gGh2xJ6dG4U">
+                              <input type="hidden" name="form_id"
+                                     id="edit-search-theme-form"
+                                     value="search_theme_form">
+                          </div>
+                      </div>
+                  </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--END TESTING-->
+    </div>
+</nav>
+    <header id="branding" role="banner" class="clearfix">
+        <nav id="access" role="navigation" class="clearfix">
+            <div class="container">
+                <h1 class="blog-title"><a
+                            href="https://devblogs.nvidia.com/"><span>Nvidia</span>
+                        developer blog</a></h1>
+                <h3 class="assistive-text">Main menu</h3>
+                              <div class="skip-link"><a class="assistive-text" href="#content"
+                                          title="Skip to primary content">Skip to primary content</a>
+                </div>
+                <div class="skip-link"><a class="assistive-text"
+                                          href="#secondary"
+                                          title="Skip to secondary content">Skip to secondary content</a>
+                </div>
+              
+              
+                <div class="home-header-button-box">
+                    <div class="home-button developer-button">
+                        <a target="_blank"
+                           href="https://news.developer.nvidia.com/">
+                            <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                            <span class="hidden-xs hidden-sm">Developer news</span>
+                        </a>
+                    </div>
+                    <div class="home-button tag-button">
+                        <a href="#">
+                            <i class="fa fa-tag" aria-hidden="true"></i>
+                            <span class="hidden-xs hidden-sm">All Tags</span>
+                        </a>
+                    </div>
+                    <div class="home-button subscribe-button">
+                        <a href="#">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <span class="hidden-xs hidden-sm">Subscribe</span>
+                        </a>
+                    </div>
+                    <div class="home-button twitter-button">
+                        <a href="#">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <span class="hidden-xs hidden-sm">Follow US</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav><!-- #access -->
+
+        <div class="all-tags clearfix">
+            <div class="container">
+              <div class="all-tags-column col-md-2 col-sm-4 col-xs-6"><p><a href="https://devblogs.nvidia.com/tag/net/">.NET</a></p><p><a href="https://devblogs.nvidia.com/tag/360-video/">360 video</a></p><p><a href="https://devblogs.nvidia.com/tag/alea-gpu/">Alea GPU</a></p><p><a href="https://devblogs.nvidia.com/tag/algorithms/">Algorithms</a></p><p><a href="https://devblogs.nvidia.com/tag/american-options/">American Options</a></p><p><a href="https://devblogs.nvidia.com/tag/amg/">AMG</a></p><p><a href="https://devblogs.nvidia.com/tag/amgx/">AmgX</a></p><p><a href="https://devblogs.nvidia.com/tag/analytics/">Analytics</a></p><p><a href="https://devblogs.nvidia.com/tag/apache-spark/">Apache Spark</a></p><p><a href="https://devblogs.nvidia.com/tag/arm/">ARM</a></p><p><a href="https://devblogs.nvidia.com/tag/arrayfire/">ArrayFire</a></p><p><a href="https://devblogs.nvidia.com/tag/atomics/">Atomics</a></p><p><a href="https://devblogs.nvidia.com/tag/augmented-reality/">Augmented Reality</a></p><p><a href="https://devblogs.nvidia.com/tag/autonomous-machines/">Autonomous Machines</a></p><p><a href="https://devblogs.nvidia.com/tag/autonomous-vehicles/">Autonomous Vehicles</a></p><p><a href="https://devblogs.nvidia.com/tag/aws/">AWS</a></p><p><a href="https://devblogs.nvidia.com/tag/azure/">Azure</a></p><p><a href="https://devblogs.nvidia.com/tag/baidu/">Baidu</a></p><p><a href="https://devblogs.nvidia.com/tag/beginner/">Beginner</a></p><p><a href="https://devblogs.nvidia.com/tag/benchmarks/">Benchmarks</a></p><p><a href="https://devblogs.nvidia.com/tag/betweenness-centrality/">Betweenness Centrality</a></p><p><a href="https://devblogs.nvidia.com/tag/big-data/">Big Data</a></p><p><a href="https://devblogs.nvidia.com/tag/bioinformatics/">Bioinformatics</a></p><p><a href="https://devblogs.nvidia.com/tag/c/">C++</a></p><p><a href="https://devblogs.nvidia.com/tag/c11/">C++11</a></p><p><a href="https://devblogs.nvidia.com/tag/cc/">C/C++</a></p><p><a href="https://devblogs.nvidia.com/tag/caffe/">Caffe</a></p><p><a href="https://devblogs.nvidia.com/tag/caffe2/">Caffe2</a></p><p><a href="https://devblogs.nvidia.com/tag/cern/">CERN</a></p><p><a href="https://devblogs.nvidia.com/tag/cloud/">cloud</a></p><p><a href="https://devblogs.nvidia.com/tag/cluster/">Cluster</a></p><p><a href="https://devblogs.nvidia.com/tag/cmake/">CMake</a></p><p><a href="https://devblogs.nvidia.com/tag/compilation/">Compilation</a></p><p><a href="https://devblogs.nvidia.com/tag/computational-chemistry/">Computational Chemistry</a></p><p><a href="https://devblogs.nvidia.com/tag/computer-vision/">Computer Vision</a></p><p><a href="https://devblogs.nvidia.com/tag/concurrency/">Concurrency</a></p><p><a href="https://devblogs.nvidia.com/tag/containers/">Containers</a></p><p><a href="https://devblogs.nvidia.com/tag/cooperative-groups/">Cooperative Groups</a></p><p><a href="https://devblogs.nvidia.com/tag/copperhead/">Copperhead</a></p><p><a href="https://devblogs.nvidia.com/tag/cosmology/">Cosmology</a></p><p><a href="https://devblogs.nvidia.com/tag/cpu/">CPU</a></p><p><a href="https://devblogs.nvidia.com/tag/cublas/">CUBLAS</a></p><p><a href="https://devblogs.nvidia.com/tag/cuda/">CUDA</a></p><p><a href="https://devblogs.nvidia.com/tag/cuda-5-5/">CUDA 5.5</a></p><p><a href="https://devblogs.nvidia.com/tag/cuda-6/">CUDA 6</a></p><p><a href="https://devblogs.nvidia.com/tag/cuda-6-5/">CUDA 6.5</a></p></div><div class="all-tags-column col-md-2 col-sm-4 col-xs-6"><p><a href="https://devblogs.nvidia.com/tag/cuda-7/">CUDA 7</a></p><p><a href="https://devblogs.nvidia.com/tag/cuda-7-5/">CUDA 7.5</a></p><p><a href="https://devblogs.nvidia.com/tag/cuda-8/">CUDA 8</a></p><p><a href="https://devblogs.nvidia.com/tag/cuda-9/">CUDA 9</a></p><p><a href="https://devblogs.nvidia.com/tag/cuda-c/">CUDA C++</a></p><p><a href="https://devblogs.nvidia.com/tag/cuda-cc/">CUDA C/C++</a></p><p><a href="https://devblogs.nvidia.com/tag/cuda-fortran/">CUDA Fortran</a></p><p><a href="https://devblogs.nvidia.com/tag/cuda-memcheck/">cuda-memcheck</a></p><p><a href="https://devblogs.nvidia.com/tag/cudacasts/">CUDACasts</a></p><p><a href="https://devblogs.nvidia.com/tag/cudnn/">cuDNN</a></p><p><a href="https://devblogs.nvidia.com/tag/cudpp/">CUDPP</a></p><p><a href="https://devblogs.nvidia.com/tag/cufft/">cuFFT</a></p><p><a href="https://devblogs.nvidia.com/tag/curand/">cuRAND</a></p><p><a href="https://devblogs.nvidia.com/tag/cusolver/">cuSOLVER</a></p><p><a href="https://devblogs.nvidia.com/tag/cusparse/">cuSPARSE</a></p><p><a href="https://devblogs.nvidia.com/tag/database/">Database</a></p><p><a href="https://devblogs.nvidia.com/tag/datacenter/">Datacenter</a></p><p><a href="https://devblogs.nvidia.com/tag/debugging/">Debugging</a></p><p><a href="https://devblogs.nvidia.com/tag/deep-learning/">Deep Learning</a></p><p><a href="https://devblogs.nvidia.com/tag/deep-neural-networks/">Deep Neural Networks</a></p><p><a href="https://devblogs.nvidia.com/tag/deepstream/">DeepStream</a></p><p><a href="https://devblogs.nvidia.com/tag/designworks/">DesignWorks</a></p><p><a href="https://devblogs.nvidia.com/tag/detectnet/">DetectNet</a></p><p><a href="https://devblogs.nvidia.com/tag/device-queries/">Device queries</a></p><p><a href="https://devblogs.nvidia.com/tag/dgx-1/">DGX-1</a></p><p><a href="https://devblogs.nvidia.com/tag/digits/">DIGITS</a></p><p><a href="https://devblogs.nvidia.com/tag/directives/">Directives</a></p><p><a href="https://devblogs.nvidia.com/tag/docker/">Docker</a></p><p><a href="https://devblogs.nvidia.com/tag/dp4a/">DP4A</a></p><p><a href="https://devblogs.nvidia.com/tag/drive-px/">DRIVE PX</a></p><p><a href="https://devblogs.nvidia.com/tag/dsl/">DSL</a></p><p><a href="https://devblogs.nvidia.com/tag/dx11/">DX11</a></p><p><a href="https://devblogs.nvidia.com/tag/dx12/">DX12</a></p><p><a href="https://devblogs.nvidia.com/tag/dynamic-parallelism/">Dynamic Parallelism</a></p><p><a href="https://devblogs.nvidia.com/tag/embedded/">Embedded</a></p><p><a href="https://devblogs.nvidia.com/tag/epidemiology/">Epidemiology</a></p><p><a href="https://devblogs.nvidia.com/tag/error-handling/">Error handling</a></p><p><a href="https://devblogs.nvidia.com/tag/events/">Events</a></p><p><a href="https://devblogs.nvidia.com/tag/f/">F#</a></p><p><a href="https://devblogs.nvidia.com/tag/fft/">FFT</a></p><p><a href="https://devblogs.nvidia.com/tag/finance/">Finance</a></p><p><a href="https://devblogs.nvidia.com/tag/finite-difference/">Finite Difference</a></p><p><a href="https://devblogs.nvidia.com/tag/finite-elements/">Finite Elements</a></p><p><a href="https://devblogs.nvidia.com/tag/floating-point/">floating point</a></p><p><a href="https://devblogs.nvidia.com/tag/fluid-dynamics/">Fluid Dynamics</a></p><p><a href="https://devblogs.nvidia.com/tag/fortran/">Fortran</a></p></div><div class="all-tags-column col-md-2 col-sm-4 col-xs-6"><p><a href="https://devblogs.nvidia.com/tag/fp16/">FP16</a></p><p><a href="https://devblogs.nvidia.com/tag/gameworks/">GameWorks</a></p><p><a href="https://devblogs.nvidia.com/tag/gan/">GAN</a></p><p><a href="https://devblogs.nvidia.com/tag/geometry/">Geometry</a></p><p><a href="https://devblogs.nvidia.com/tag/geophysics/">Geophysics</a></p><p><a href="https://devblogs.nvidia.com/tag/geospatial/">Geospatial</a></p><p><a href="https://devblogs.nvidia.com/tag/gis/">GIS</a></p><p><a href="https://devblogs.nvidia.com/tag/gpu/">GPU</a></p><p><a href="https://devblogs.nvidia.com/tag/gpu-boost/">GPU Boost</a></p><p><a href="https://devblogs.nvidia.com/tag/gpu-inference-engine/">GPU Inference Engine</a></p><p><a href="https://devblogs.nvidia.com/tag/gpuboost/">GPUBoost</a></p><p><a href="https://devblogs.nvidia.com/tag/gpudirect/">GPUDirect</a></p><p><a href="https://devblogs.nvidia.com/tag/gradient-boosting/">Gradient Boosting</a></p><p><a href="https://devblogs.nvidia.com/tag/graph-algorithms/">Graph Algorithms</a></p><p><a href="https://devblogs.nvidia.com/tag/graph-analytics/">Graph Analytics</a></p><p><a href="https://devblogs.nvidia.com/tag/graph-coloring/">Graph Coloring</a></p><p><a href="https://devblogs.nvidia.com/tag/graph-cuts/">Graph Cuts</a></p><p><a href="https://devblogs.nvidia.com/tag/graphs/">Graphs</a></p><p><a href="https://devblogs.nvidia.com/tag/gtc/">GTC</a></p><p><a href="https://devblogs.nvidia.com/tag/hackathon/">Hackathon</a></p><p><a href="https://devblogs.nvidia.com/tag/hands-on/">Hands-on</a></p><p><a href="https://devblogs.nvidia.com/tag/hardware/">Hardware</a></p><p><a href="https://devblogs.nvidia.com/tag/hbao/">HBAO+</a></p><p><a href="https://devblogs.nvidia.com/tag/healthcare/">Healthcare</a></p><p><a href="https://devblogs.nvidia.com/tag/hemi/">Hemi</a></p><p><a href="https://devblogs.nvidia.com/tag/high-energy-physics/">High-Energy Physics</a></p><p><a href="https://devblogs.nvidia.com/tag/histogram/">histogram</a></p><p><a href="https://devblogs.nvidia.com/tag/hmd/">HMD</a></p><p><a href="https://devblogs.nvidia.com/tag/hpcg/">HPCG</a></p><p><a href="https://devblogs.nvidia.com/tag/hyperscale/">Hyperscale</a></p><p><a href="https://devblogs.nvidia.com/tag/ibm/">IBM</a></p><p><a href="https://devblogs.nvidia.com/tag/ilsvrc/">ILSVRC</a></p><p><a href="https://devblogs.nvidia.com/tag/image-enhancement/">Image Enhancement</a></p><p><a href="https://devblogs.nvidia.com/tag/image-processing/">Image Processing</a></p><p><a href="https://devblogs.nvidia.com/tag/image-registration/">Image registration</a></p><p><a href="https://devblogs.nvidia.com/tag/image-segmentation/">Image Segmentation</a></p><p><a href="https://devblogs.nvidia.com/tag/imagenet/">ImageNet</a></p><p><a href="https://devblogs.nvidia.com/tag/in-situ/">In-situ</a></p><p><a href="https://devblogs.nvidia.com/tag/index/">IndeX</a></p><p><a href="https://devblogs.nvidia.com/tag/inference/">Inference</a></p><p><a href="https://devblogs.nvidia.com/tag/installation/">Installation</a></p><p><a href="https://devblogs.nvidia.com/tag/interview/">Interview</a></p><p><a href="https://devblogs.nvidia.com/tag/java/">Java</a></p><p><a href="https://devblogs.nvidia.com/tag/jetpack/">Jetpack</a></p><p><a href="https://devblogs.nvidia.com/tag/jetson/">Jetson</a></p><p><a href="https://devblogs.nvidia.com/tag/jetson-tk1/">Jetson TK1</a></p></div><div class="all-tags-column col-md-2 col-sm-4 col-xs-6"><p><a href="https://devblogs.nvidia.com/tag/jit/">JIT</a></p><p><a href="https://devblogs.nvidia.com/tag/julia/">Julia</a></p><p><a href="https://devblogs.nvidia.com/tag/k80/">K80</a></p><p><a href="https://devblogs.nvidia.com/tag/kepler/">Kepler</a></p><p><a href="https://devblogs.nvidia.com/tag/keras/">Keras</a></p><p><a href="https://devblogs.nvidia.com/tag/lambda/">Lambda</a></p><p><a href="https://devblogs.nvidia.com/tag/languages/">Languages</a></p><p><a href="https://devblogs.nvidia.com/tag/large-hadron-collider/">Large Hadron Collider</a></p><p><a href="https://devblogs.nvidia.com/tag/libraries/">Libraries</a></p><p><a href="https://devblogs.nvidia.com/tag/linear-algebra/">Linear Algebra</a></p><p><a href="https://devblogs.nvidia.com/tag/linux/">Linux</a></p><p><a href="https://devblogs.nvidia.com/tag/llvm/">LLVM</a></p><p><a href="https://devblogs.nvidia.com/tag/longstaff-schwartz/">Longstaff Schwartz</a></p><p><a href="https://devblogs.nvidia.com/tag/lsdalton/">LSDalton</a></p><p><a href="https://devblogs.nvidia.com/tag/lstm/">LSTM</a></p><p><a href="https://devblogs.nvidia.com/tag/lulesh/">LULESH</a></p><p><a href="https://devblogs.nvidia.com/tag/machine-learning/">Machine Learning</a></p><p><a href="https://devblogs.nvidia.com/tag/machine-translation/">Machine Translation</a></p><p><a href="https://devblogs.nvidia.com/tag/malware-detection/">Malware Detection</a></p><p><a href="https://devblogs.nvidia.com/tag/mapd/">MapD</a></p><p><a href="https://devblogs.nvidia.com/tag/materials-science/">Materials Science</a></p><p><a href="https://devblogs.nvidia.com/tag/matlab/">MATLAB</a></p><p><a href="https://devblogs.nvidia.com/tag/matrix-factorization/">Matrix Factorization</a></p><p><a href="https://devblogs.nvidia.com/tag/maxwell/">Maxwell</a></p><p><a href="https://devblogs.nvidia.com/tag/medical-imaging/">Medical Imaging</a></p><p><a href="https://devblogs.nvidia.com/tag/memory/">Memory</a></p><p><a href="https://devblogs.nvidia.com/tag/mesos/">Mesos</a></p><p><a href="https://devblogs.nvidia.com/tag/mixed-precision/">Mixed Precision</a></p><p><a href="https://devblogs.nvidia.com/tag/mobile/">Mobile</a></p><p><a href="https://devblogs.nvidia.com/tag/molecular-dynamics/">Molecular Dynamics</a></p><p><a href="https://devblogs.nvidia.com/tag/monte-carlo/">Monte Carlo</a></p><p><a href="https://devblogs.nvidia.com/tag/mpi/">MPI</a></p><p><a href="https://devblogs.nvidia.com/tag/multi-gpu/">Multi-GPU</a></p><p><a href="https://devblogs.nvidia.com/tag/multi-grid/">Multi-grid</a></p><p><a href="https://devblogs.nvidia.com/tag/mxnet/">MxNet</a></p><p><a href="https://devblogs.nvidia.com/tag/n-body/">n-body</a></p><p><a href="https://devblogs.nvidia.com/tag/nanotechnology/">nanotechnology</a></p><p><a href="https://devblogs.nvidia.com/tag/natural-language-processing/">Natural Language Processing</a></p><p><a href="https://devblogs.nvidia.com/tag/natural-language-understanding/">Natural Language Understanding</a></p><p><a href="https://devblogs.nvidia.com/tag/nccl/">NCCL</a></p><p><a href="https://devblogs.nvidia.com/tag/neural-networks/">Neural Networks</a></p><p><a href="https://devblogs.nvidia.com/tag/nsight-eclipse-edition/">NSight Eclipse Edition</a></p><p><a href="https://devblogs.nvidia.com/tag/nsight-visual-studio-edition/">Nsight Visual Studio Edition</a></p><p><a href="https://devblogs.nvidia.com/tag/numba/">Numba</a></p><p><a href="https://devblogs.nvidia.com/tag/numerical-algorithms/">Numerical Algorithms</a></p><p><a href="https://devblogs.nvidia.com/tag/nvgraph/">nvGRAPH</a></p></div><div class="all-tags-column col-md-2 col-sm-4 col-xs-6"><p><a href="https://devblogs.nvidia.com/tag/nvidia-gpu-cloud/">NVIDIA GPU Cloud</a></p><p><a href="https://devblogs.nvidia.com/tag/nvidia-smi/">nvidia-smi</a></p><p><a href="https://devblogs.nvidia.com/tag/nvlink/">NVLink</a></p><p><a href="https://devblogs.nvidia.com/tag/nvml/">NVML</a></p><p><a href="https://devblogs.nvidia.com/tag/nvtx/">NVTX</a></p><p><a href="https://devblogs.nvidia.com/tag/object-detection/">Object Detection</a></p><p><a href="https://devblogs.nvidia.com/tag/occupancy/">Occupancy</a></p><p><a href="https://devblogs.nvidia.com/tag/openacc/">OpenACC</a></p><p><a href="https://devblogs.nvidia.com/tag/openacc-toolkit/">OpenACC Toolkit</a></p><p><a href="https://devblogs.nvidia.com/tag/opencv/">OpenCV</a></p><p><a href="https://devblogs.nvidia.com/tag/opengl/">OpenGL</a></p><p><a href="https://devblogs.nvidia.com/tag/openmp/">OpenMP</a></p><p><a href="https://devblogs.nvidia.com/tag/openpower/">OpenPower</a></p><p><a href="https://devblogs.nvidia.com/tag/operations/">Operations</a></p><p><a href="https://devblogs.nvidia.com/tag/optimization/">Optimization</a></p><p><a href="https://devblogs.nvidia.com/tag/optix/">OptiX</a></p><p><a href="https://devblogs.nvidia.com/tag/parallel-programming/">Parallel Programming</a></p><p><a href="https://devblogs.nvidia.com/tag/pascal/">Pascal</a></p><p><a href="https://devblogs.nvidia.com/tag/pci-express/">pci-express</a></p><p><a href="https://devblogs.nvidia.com/tag/performance/">Performance</a></p><p><a href="https://devblogs.nvidia.com/tag/pgi/">PGI</a></p><p><a href="https://devblogs.nvidia.com/tag/photography/">photography</a></p><p><a href="https://devblogs.nvidia.com/tag/physics/">physics</a></p><p><a href="https://devblogs.nvidia.com/tag/portability/">Portability</a></p><p><a href="https://devblogs.nvidia.com/tag/porting/">Porting</a></p><p><a href="https://devblogs.nvidia.com/tag/power/">Power</a></p><p><a href="https://devblogs.nvidia.com/tag/pro-tip/">Pro Tip</a></p><p><a href="https://devblogs.nvidia.com/tag/profiling/">Profiling</a></p><p><a href="https://devblogs.nvidia.com/tag/prototyping/">Prototyping</a></p><p><a href="https://devblogs.nvidia.com/tag/python/">Python</a></p><p><a href="https://devblogs.nvidia.com/tag/pytorch/">PyTorch</a></p><p><a href="https://devblogs.nvidia.com/tag/quantum-chemistry/">Quantum Chemistry</a></p><p><a href="https://devblogs.nvidia.com/tag/r/">R</a></p><p><a href="https://devblogs.nvidia.com/tag/rdma/">RDMA</a></p><p><a href="https://devblogs.nvidia.com/tag/recommender-systems/">Recommender Systems</a></p><p><a href="https://devblogs.nvidia.com/tag/recurrent-neural-networks/">Recurrent Neural Networks</a></p><p><a href="https://devblogs.nvidia.com/tag/reduction/">Reduction</a></p><p><a href="https://devblogs.nvidia.com/tag/reinforcement-learning/">Reinforcement Learning</a></p><p><a href="https://devblogs.nvidia.com/tag/resources/">Resources</a></p><p><a href="https://devblogs.nvidia.com/tag/rest/">REST</a></p><p><a href="https://devblogs.nvidia.com/tag/rnn/">RNN</a></p><p><a href="https://devblogs.nvidia.com/tag/robotics/">Robotics</a></p><p><a href="https://devblogs.nvidia.com/tag/runtime-compilation/">Runtime Compilation</a></p><p><a href="https://devblogs.nvidia.com/tag/seismic-simulation/">Seismic Simulation</a></p><p><a href="https://devblogs.nvidia.com/tag/server-side/">Server-side</a></p><p><a href="https://devblogs.nvidia.com/tag/shape-sensing/">Shape Sensing</a></p></div><div class="all-tags-column col-md-2 col-sm-4 col-xs-6"><p><a href="https://devblogs.nvidia.com/tag/shared-memory/">Shared Memory</a></p><p><a href="https://devblogs.nvidia.com/tag/signal-processing/">Signal Processing</a></p><p><a href="https://devblogs.nvidia.com/tag/simulation/">Simulation</a></p><p><a href="https://devblogs.nvidia.com/tag/site-news/">Site News</a></p><p><a href="https://devblogs.nvidia.com/tag/software-engineering/">Software Engineering</a></p><p><a href="https://devblogs.nvidia.com/tag/sparql/">SPARQL</a></p><p><a href="https://devblogs.nvidia.com/tag/speech-recognition/">speech recognition</a></p><p><a href="https://devblogs.nvidia.com/tag/spotlight/">Spotlight</a></p><p><a href="https://devblogs.nvidia.com/tag/sql/">SQL</a></p><p><a href="https://devblogs.nvidia.com/tag/stac/">STAC</a></p><p><a href="https://devblogs.nvidia.com/tag/stacked-memory/">stacked memory</a></p><p><a href="https://devblogs.nvidia.com/tag/stereo/">Stereo</a></p><p><a href="https://devblogs.nvidia.com/tag/streams/">Streams</a></p><p><a href="https://devblogs.nvidia.com/tag/supercomputing/">Supercomputing</a></p><p><a href="https://devblogs.nvidia.com/tag/tegra/">Tegra</a></p><p><a href="https://devblogs.nvidia.com/tag/templates/">Templates</a></p><p><a href="https://devblogs.nvidia.com/tag/tensor-cores/">Tensor Cores</a></p><p><a href="https://devblogs.nvidia.com/tag/tensorflow/">TensorFlow</a></p><p><a href="https://devblogs.nvidia.com/tag/tensorrt/">TensorRT</a></p><p><a href="https://devblogs.nvidia.com/tag/tensors/">Tensors</a></p><p><a href="https://devblogs.nvidia.com/tag/teraproc/">Teraproc</a></p><p><a href="https://devblogs.nvidia.com/tag/tesla/">Tesla</a></p><p><a href="https://devblogs.nvidia.com/tag/tesla-p100/">Tesla P100</a></p><p><a href="https://devblogs.nvidia.com/tag/tesla-platform/">Tesla Platform</a></p><p><a href="https://devblogs.nvidia.com/tag/tesla-v100/">Tesla V100</a></p><p><a href="https://devblogs.nvidia.com/tag/textures/">Textures</a></p><p><a href="https://devblogs.nvidia.com/tag/theano/">Theano</a></p><p><a href="https://devblogs.nvidia.com/tag/thrust/">Thrust</a></p><p><a href="https://devblogs.nvidia.com/tag/tools/">Tools</a></p><p><a href="https://devblogs.nvidia.com/tag/torch/">Torch</a></p><p><a href="https://devblogs.nvidia.com/tag/training/">training</a></p><p><a href="https://devblogs.nvidia.com/tag/unified-memory/">Unified Memory</a></p><p><a href="https://devblogs.nvidia.com/tag/video-analytics/">Video Analytics</a></p><p><a href="https://devblogs.nvidia.com/tag/virtual-reality/">Virtual Reality</a></p><p><a href="https://devblogs.nvidia.com/tag/visualization/">Visualization</a></p><p><a href="https://devblogs.nvidia.com/tag/volta/">Volta</a></p><p><a href="https://devblogs.nvidia.com/tag/vrworks/">VRWorks</a></p><p><a href="https://devblogs.nvidia.com/tag/warehouse/">Warehouse</a></p><p><a href="https://devblogs.nvidia.com/tag/women-and-cuda/">Women and CUDA</a></p><p><a href="https://devblogs.nvidia.com/tag/xgboost/">XGBoost</a></p></div>            </div>
+        </div>
+
+        <div class="twitter-menu clearfix">
+            <div class="container">
+              <div class="flexbox-menu clearfix twitter-menu-content"><div class='twitter-menu-link'>
+                                 <a onclick="window.open('https://twitter.com/NVIDIAAIDev','','Toolbar=0,Location=0,Directories=0,Status=0,Menubar=0,Scrollbars=1,Resizable=1,Width=800,Height=450, top='+((screen.height-600)/2)+',left='+((screen.width-700)/2)+'');" href="#">
+                                   <i class="fa fa-twitter" aria-hidden="true"></i>
+                                   NVIDIAAIDev
+                                 </a>
+                               </div><div class='twitter-menu-link'>
+                                 <a onclick="window.open('https://twitter.com/NVIDIAHPCDev','','Toolbar=0,Location=0,Directories=0,Status=0,Menubar=0,Scrollbars=1,Resizable=1,Width=800,Height=450, top='+((screen.height-600)/2)+',left='+((screen.width-700)/2)+'');" href="#">
+                                   <i class="fa fa-twitter" aria-hidden="true"></i>
+                                   NVIDIAHPCDev
+                                 </a>
+                               </div><div class='twitter-menu-link'>
+                                 <a onclick="window.open('https://twitter.com/NVIDIAGameDev','','Toolbar=0,Location=0,Directories=0,Status=0,Menubar=0,Scrollbars=1,Resizable=1,Width=800,Height=450, top='+((screen.height-600)/2)+',left='+((screen.width-700)/2)+'');" href="#">
+                                   <i class="fa fa-twitter" aria-hidden="true"></i>
+                                   NVIDIAGameDev
+                                 </a>
+                               </div><div class='twitter-menu-link'>
+                                 <a onclick="window.open('https://twitter.com/nvidiaembedded','','Toolbar=0,Location=0,Directories=0,Status=0,Menubar=0,Scrollbars=1,Resizable=1,Width=800,Height=450, top='+((screen.height-600)/2)+',left='+((screen.width-700)/2)+'');" href="#">
+                                   <i class="fa fa-twitter" aria-hidden="true"></i>
+                                   NVIDIAEmbedded
+                                 </a>
+                               </div><div class='twitter-menu-link'>
+                                 <a onclick="window.open('https://twitter.com/NVIDIADrive','','Toolbar=0,Location=0,Directories=0,Status=0,Menubar=0,Scrollbars=1,Resizable=1,Width=800,Height=450, top='+((screen.height-600)/2)+',left='+((screen.width-700)/2)+'');" href="#">
+                                   <i class="fa fa-twitter" aria-hidden="true"></i>
+                                   NVIDIADrive
+                                 </a>
+                               </div><div class='twitter-menu-link'>
+                                 <a onclick="window.open('https://twitter.com/NVIDIADesign','','Toolbar=0,Location=0,Directories=0,Status=0,Menubar=0,Scrollbars=1,Resizable=1,Width=800,Height=450, top='+((screen.height-600)/2)+',left='+((screen.width-700)/2)+'');" href="#">
+                                   <i class="fa fa-twitter" aria-hidden="true"></i>
+                                   NVIDIADesign
+                                 </a>
+                               </div></div>            </div>
+        </div>
+
+        <div class="subscribe-menu clearfix">
+            <div class="container">
+                <script src="//app-sj14.marketo.com/js/forms2/js/forms2.min.js"></script>
+                <form id="mktoForm_4191"></form>
+                <script>MktoForms2.loadForm("//app-sj14.marketo.com", "156-OFN-742", 4191);</script>
+                <script>
+                  MktoForms2.whenReady(function (form) {
+                    jQuery('.mktoFormRow:eq(0)').addClass('title-form col-lg-2 col-md-2 col-sm-12 col-xs-12');
+                    jQuery('.mktoFormRow:eq(9), .mktoFormRow:eq(10),.mktoFormRow:eq(11)').addClass('hidden');
+                    jQuery('.mktoFormRow:eq(1), .mktoFormRow:eq(2), .mktoFormRow:eq(3), .mktoFormRow:eq(4)').wrapAll('<div class="subscribe-wrap col-lg-5 col-md-5 col-sm-6 col-xs-12"></div>');
+                    jQuery('.mktoFormRow:eq(5), .mktoFormRow:eq(6), .mktoFormRow:eq(7), .mktoFormRow:eq(8)').wrapAll('<div class="subscribe-wrap col-lg-5 col-md-5 col-sm-6 col-xs-12"></div>');
+
+                    jQuery(':input[type="submit"]').prop('disabled', true);
+
+                    var form = jQuery('.mktoForm');
+                    var inputs = form.find(':input');
+                    form.on('change input paste', function(){
+                        var status = [];
+                        inputs.each(function(){
+                          if(this.value == '' || !jQuery(':input[type="checkbox"]').is(':checked')){
+                            return status.push('invalid');
+                          }
+                          else {
+                            return status.push('valid');
+                          }
+                        });
+
+                        if(status[0] == 'valid' && status[1] == 'valid' && status[2] == 'valid' && status[3] == 'valid' && status[4] == 'valid' && status[5] == 'valid' && status[6] == 'valid'){
+                          jQuery(':input[type="submit"]').prop('disabled', false);
+                        } else {
+                          jQuery(':input[type="submit"]').prop('disabled', true);
+                        }
+                    });
+                  });
+                </script>
+            </div>
+        </div>
+    </header>
+
+    <div id="main" class="clearfix">
+
+<div class="all-categories">
+    <nav class="navbar navbar-default topic-navigation">
+        <div class="hidden-sm hidden-md hidden-lg">
+            <button type="button" class="navbar-toggle"
+                    data-toggle="collapse"
+                    data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <p class="topic-title hidden-sm hidden-md hidden-lg">Topics</p>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav hidden-sm hidden-md hidden-lg">
+              	<li class="cat-item cat-item-444"><a href="https://devblogs.nvidia.com/category/accelerated-computing/" title="
+
+GPU-accelerated computing is the use of a graphics processing unit (GPU) together with a CPU to accelerate deep learning, analytics, and engineering applications. With NVIDIA ComputeWorks SDKs, you can develop, optimize and deploy GPU-accelerated applications using widely-used languages such as C, C++, Python, Fortran and MATLAB.">Accelerated Computing</a>
+</li>
+	<li class="cat-item cat-item-443"><a href="https://devblogs.nvidia.com/category/artificial-intelligence/" title="Deep learning is used in the research community and in industry to help solve many big data problems such as computer vision, speech recognition, and natural language processing. The NVIDIA Deep Learning SDK provides high-performance tools and libraries to power innovative GPU-accelerated machine learning applications in the cloud, data centers, workstations, and embedded platforms.">Artificial Intelligence</a>
+</li>
+	<li class="cat-item cat-item-445"><a href="https://devblogs.nvidia.com/category/autonomous-vehicles/" title="The NVIDIA DRIVE Platform is an autonomous computing platform that enables automakers and Tier-1 suppliers to accelerate production of automated and autonomous vehicles. It scales from a palm-sized, energy efficient module for AutoCruise capabilities, to a powerful AI supercomputer capable of autonomous driving.">Autonomous Vehicles</a>
+</li>
+	<li class="cat-item cat-item-448"><a href="https://devblogs.nvidia.com/category/design-visualization/" title="NVIDIA DesignWorks is a unique suite of tools and technologies designed specifically for developers creating professional graphics and advanced rendering applications. Now, developers of CAD, AEC, and rendering applications can have a wide range of development tools, sample code, and advanced libraries to do their best work.">Design &amp; Visualization</a>
+</li>
+	<li class="cat-item cat-item-457"><a href="https://devblogs.nvidia.com/category/game-development/" title="Developers need the best tools, samples, and libraries to bring their creations to life. NVIDIA&#039;s award winning GameWorks SDK provides access to the best technology from the leader in visual computing.">Game Development</a>
+</li>
+	<li class="cat-item cat-item-446"><a href="https://devblogs.nvidia.com/category/robotics/" title="Today&#039;s robots can do more than just perform tasks. They can learn, adapt, and evolve using capabilities like machine learning, computer vision, navigation, and more. NVIDIA Jetson uses the power of deep learning to drive this exciting new era of smart embedded robotics—from manufacturing and agriculture to security and home-based healthcare.">Robotics</a>
+</li>
+	<li class="cat-item cat-item-447"><a href="https://devblogs.nvidia.com/category/smart-cities/" title="
+
+Data is the lifeblood of the modern city. Today, it’s being captured by over 500 million cameras worldwide, and that number is growing exponentially. AI is the key to turning this information into insight to create smart cities. It’s transforming how we capture, inspect, and analyze data to impact everything from public safety, traffic, and parking management to law enforcement and city services.
+
+">Smart Cities</a>
+</li>
+	<li class="cat-item cat-item-455"><a href="https://devblogs.nvidia.com/category/virtual-reality/" title="NVIDIA VRWorks is a comprehensive suite of APIs, libraries, and engines that enable application and headset developers to create amazing virtual reality experiences. VRWorks enables a new level of presence by bringing physically realistic visuals, sound, touch interactions, and simulated environments to virtual reality.">Virtual Reality</a>
+</li>
+            </ul>
+
+            <div class="visible-lg-block visible-md-block visible-sm-block">
+              <div class="all-categories-content"><a href="https://devblogs.nvidia.com/category/accelerated-computing/">Accelerated Computing</a></div><div class="all-categories-content"><a href="https://devblogs.nvidia.com/category/artificial-intelligence/">Artificial Intelligence</a></div><div class="all-categories-content"><a href="https://devblogs.nvidia.com/category/autonomous-vehicles/">Autonomous Vehicles</a></div><div class="all-categories-content"><a href="https://devblogs.nvidia.com/category/design-visualization/">Design &amp; Visualization</a></div><div class="all-categories-content"><a href="https://devblogs.nvidia.com/category/game-development/">Game Development</a></div><div class="all-categories-content"><a href="https://devblogs.nvidia.com/category/robotics/">Robotics</a></div><div class="all-categories-content"><a href="https://devblogs.nvidia.com/category/smart-cities/">Smart Cities</a></div><div class="all-categories-content"><a href="https://devblogs.nvidia.com/category/virtual-reality/">Virtual Reality</a></div>            </div>
+        </div>
+    </nav>
+</div>
+
+<div id="pf-post-view">
+    <div class="container">
+
+                  <article id="post-6063" class="post-6063 post type-post status-publish format-standard has-post-thumbnail hentry category-artificial-intelligence tag-cudnn tag-deep-learning tag-deep-neural-networks tag-machine-learning tag-neural-networks">
+                <header class="entry-header">
+                  <div class="category-posts-about"><a href="https://devblogs.nvidia.com/category/artificial-intelligence/" title="Artificial Intelligence">Artificial Intelligence</a></div> &nbsp; 
+                    <h1 class="entry-title">Deep Learning in a Nutshell: Core Concepts</h1>
+
+                    <div class="entry-meta">
+                        <div class="home-posts-author">
+                          By <a href="https://devblogs.nvidia.com/author/tdettmers/" title="Posts by Tim Dettmers" class="author url fn" rel="author">Tim Dettmers</a> | <a href="https://devblogs.nvidia.com/deep-learning-nutshell-core-concepts/" title="5:50 pm" rel="bookmark"><time class="entry-date" datetime="5:50 pm" pubdate>November 3, 2015 </time></a>
+                            <div class="posts-tag">
+                                <i class="fa fa-tag" aria-hidden="true"></i>
+                              Tags: <a href="https://devblogs.nvidia.com/tag/cudnn/" rel="tag">cuDNN</a>, <a href="https://devblogs.nvidia.com/tag/deep-learning/" rel="tag">Deep Learning</a>, <a href="https://devblogs.nvidia.com/tag/deep-neural-networks/" rel="tag">Deep Neural Networks</a>, <a href="https://devblogs.nvidia.com/tag/machine-learning/" rel="tag">Machine Learning</a>, <a href="https://devblogs.nvidia.com/tag/neural-networks/" rel="tag">Neural Networks</a><br />                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="entry-content">
+                  <p><img class="alignright wp-image-5782 size-medium" src="/wp-content/uploads/2015/08/DL_dog_340x340-300x300.jpg" alt="DL_dog_340x340" width="300" height="300" srcset="https://devblogs.nvidia.com/wp-content/uploads/2015/08/DL_dog_340x340-300x300.jpg 300w, https://devblogs.nvidia.com/wp-content/uploads/2015/08/DL_dog_340x340-90x90.jpg 90w, https://devblogs.nvidia.com/wp-content/uploads/2015/08/DL_dog_340x340-150x150.jpg 150w, https://devblogs.nvidia.com/wp-content/uploads/2015/08/DL_dog_340x340.jpg 340w" sizes="(max-width: 300px) 100vw, 300px" />This post is the first in a series I’ll be writing for Parallel Forall that aims to provide an intuitive and gentle introduction to<a href="https://developer.nvidia.com/deep-learning"> deep learning</a>. It covers the most important deep learning concepts and aims to provide an understanding of each concept rather than its mathematical and theoretical details. While the mathematical terminology is sometimes necessary and can further understanding, these posts use analogies and images whenever possible to provide easily digestible bits comprising an intuitive overview of the field of deep learning.</p>
+<p>I wrote this series in a glossary style so it can also be used as a reference for deep learning concepts.</p>
+<p>Part 1 focuses on introducing the main concepts of deep learning. <a href="https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-history-training/">Part 2</a> provides historical background and delves into the training procedures, algorithms and practical tricks that are used in training for deep learning. <a href="https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-sequence-learning/">Part 3</a> covers sequence learning, including recurrent neural networks, LSTMs, and encoder-decoder systems for neural machine translation. <a href="https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-reinforcement-learning/">Part 4</a> covers reinforcement learning.</p>
+<h2>Core Concepts</h2>
+<h3><a id="machine-learning"></a>Machine Learning</h3>
+<p>In machine learning we (1) take some data, (2) train a model on that data, and (3) use the trained model to make predictions on new data. The process of <a href="https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-history-training#training">training</a> a model can be seen as a learning process where the model is exposed to new, unfamiliar data step by step. At each step, the model makes predictions and gets feedback about how accurate its generated predictions were. This feedback, which is provided in terms of an error according to some measure (for example distance from the correct solution), is used to correct the errors made in prediction.</p>
+<p>The learning process is often a game of back-and-forth in the parameter space: If you tweak a parameter of the model to get a prediction right, the model may have in such that it gets a previously correct prediction wrong. It may take many iterations to train a model with good predictive performance. This iterative predict-and-adjust process continues until the predictions of the model no longer improve.</p>
+<h3><a id="feature-engineering"></a>Feature Engineering</h3>
+<p>Feature engineering is the art of extracting useful patterns from data that will make it easier for <a href="#machine-learning">Machine Learning</a> models to distinguish between classes. For example, you might take the number of greenish vs. bluish pixels as an indicator of whether a land or water animal is in some picture. This feature is helpful for a machine learning model because it limits the number of classes that need to be considered for a good classification.<span id="more-6063"></span></p>
+<p>Feature engineering is the most important skill when you want to achieve good results for most predictions tasks. However, it is difficult to learn and master since different data sets and different kinds of data require different feature engineering approaches. Only crude guidelines exist, which makes feature engineering more of an art than a science. Features that are usable for one data set often are not usable for other data sets (for example the next image data set only contains land animals). The difficulty of feature engineering and the effort involved is the main reason to seek algorithms that can learn features; that is, algorithms that automatically engineer features.</p>
+<p>While many tasks can be automated by Feature Learning (like object and speech recognition), feature engineering remains <a href="http://blog.kaggle.com/2014/08/01/learning-from-the-best/">the single most effective technique to do well in difficult tasks</a> (like most tasks in Kaggle machine learning competitions).</p>
+<h3><a id="feature-learning"></a>Feature Learning</h3>
+<p>Feature learning algorithms find the common patterns that are important to distinguish between classes and extract them automatically to be used in a classification or regression process. Feature learning can be thought of as <a href="#feature-engineering">Feature Engineering</a> done automatically by algorithms. In deep learning, convolutional layers are exceptionally good at finding good features in images to the next layer to form a hierarchy of nonlinear features that grow in complexity (e.g. blobs, edges -&gt; noses, eyes, cheeks -&gt; faces). The final layer(s) use all these generated features for classification or regression (the last layer in a convolutional net is, essentially, multinomial <a href="#logistic-regression">logistic regression</a>).</p>
+<p><img class="size-full wp-image-6067" src="/wp-content/uploads/2015/11/hierarchical_features.png" alt="Hierarchical Features" width="754" height="208" srcset="https://devblogs.nvidia.com/wp-content/uploads/2015/11/hierarchical_features.png 754w, https://devblogs.nvidia.com/wp-content/uploads/2015/11/hierarchical_features-300x83.png 300w, https://devblogs.nvidia.com/wp-content/uploads/2015/11/hierarchical_features-624x172.png 624w, https://devblogs.nvidia.com/wp-content/uploads/2015/11/hierarchical_features-500x138.png 500w, https://devblogs.nvidia.com/wp-content/uploads/2015/11/hierarchical_features-160x44.png 160w" sizes="(max-width: 754px) 100vw, 754px" /></p>
+<p>Figure 1: Learned hierarchical features from a deep learning algorithm. Each feature can be thought of as a filter, which filters the input image for that feature (a nose). If the feature is found, the responsible unit or units generate large activations, which can be picked up by the later classifier stages as a good indicator that the class is present. Image by Honglak Lee and colleagues (2011) as published in “Unsupervised Learning of Hierarchical Representations with Convolutional Deep Belief Networks”.</p>
+<p>Figure 1 shows features generated by a deep learning algorithm that generates easily interpretable features. This is rather unusual. Features are normally difficult to interpret, especially in deep networks like <a href="https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-sequence-learning#recurrent-neural-networks">recurrent neural networks</a> and <a href="https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-sequence-learning#LSTM">LSTMs</a> or very deep convolutional networks.</p>
+<h3><a id="deep-learning"></a>Deep Learning</h3>
+<p>In hierarchical <a href="#feature-learning">Feature Learning</a>, we extract multiple layers of non-linear features and pass them to a classifier that combines all the features to make predictions. We are interested in stacking such very deep hierarchies of non-linear features because we cannot learn complex features from a few layers. It can be shown mathematically that for images the best features for a single layer are edges and blobs because they contain the most information that we can extract from a single non-linear transformation. To generate features that contain more information we cannot operate on the inputs directly, but we need to transform our first features (edges and blobs) again to get more complex features that contain more information to distinguish between classes.</p>
+<p>It has been shown that the human brain does exactly the same thing: The first hierarchy of neurons that receives information in the visual cortex are sensitive to specific edges and blobs while brain regions further down the visual pipeline are sensitive to more complex structures such as faces.</p>
+<p>While hierarchical feature learning was used before the field deep learning existed, these architectures suffered from major problems such as the vanishing <a href="https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-history-training#stochastic-gradient-descent">gradient</a> problem where the gradients became too small to provide a learning signal for very deep layers, thus making these architectures perform poorly when compared to shallow learning algorithms (such as support vector machines).</p>
+<p>The term deep learning originated from new methods and strategies designed to generate these deep hierarchies of non-linear features by overcoming the problems with vanishing gradients so that we can train architectures with dozens of layers of non-linear hierarchical features. In the early 2010s, it was shown that combining GPUs with <a href="#activation-function">activation functions</a> that offered better gradient flow was sufficient to train deep architectures without major difficulties. From here the interest in deep learning grew steadily.</p>
+<p>Deep learning is not associated just with learning deep non-linear hierarchical features, but also with learning to detect very long non-linear time dependencies in sequential data. While most other algorithms that work on sequential data only have a memory of the last 10 time steps, <a href="https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-sequence-learning#LSTM">long short-term memory (LSTM)</a> <a href="https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-sequence-learning#recurrent-neural-networks">recurrent neural networks</a> (invented by Sepp Hochreiter and Jürgen Schmidhuber in 1997) allow the network to pick up on activity hundreds of time-steps in the past to make accurate predictions. While LSTM networks have been mostly ignored in the past 10 years, their usage has grown rapidly since 2013 and together with convolutional nets they form one of two major success stories of deep learning.</p>
+<h2>Fundamental Concepts</h2>
+<h3><a id="logistic-regression"></a>Logistic Regression</h3>
+<p>Regression analysis estimates the relationship between statistical input variables in order to predict an outcome variable. Logistic regression is a regression model that uses input variables to predict a categorical outcome variable that can take on one of a limited set of class values, for example “cancer” / “no cancer”, or an image category such as “bird” / “car” / “dog” / “cat” / “horse”.</p>
+<p>Logistic regression applies the logistic sigmoid function (see Figure 2) to weighted input values to generate a prediction of which of two classes the input data belongs to (or in case of multinomial logistic regression, which of multiple classes).</p>
+<figure id="attachment_6161" aria-labelledby="figcaption_attachment_6161" class="wp-caption alignright" style="width: 300px"><img class="size-medium wp-image-6161" src="/wp-content/uploads/2015/11/sigmoid1-300x200.png" alt="Figure 2: The logistic sigmoid function $latex f(x) = \frac{1}{1+e^{-x}}$. Image Source" width="300" height="200" srcset="https://devblogs.nvidia.com/wp-content/uploads/2015/11/sigmoid1-300x200.png 300w, https://devblogs.nvidia.com/wp-content/uploads/2015/11/sigmoid1-450x300.png 450w, https://devblogs.nvidia.com/wp-content/uploads/2015/11/sigmoid1-135x90.png 135w, https://devblogs.nvidia.com/wp-content/uploads/2015/11/sigmoid1.png 510w" sizes="(max-width: 300px) 100vw, 300px" /><figcaption id="figcaption_attachment_6161" class="wp-caption-text">Figure 2: The logistic sigmoid function <img src="//s0.wp.com/latex.php?latex=f%28x%29+%3D+%5Cfrac%7B1%7D%7B1%2Be%5E%7B-x%7D%7D&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="f(x) = &#92;frac{1}{1+e^{-x}}" title="f(x) = &#92;frac{1}{1+e^{-x}}" class="latex" />. <a href="https://en.wikipedia.org/wiki/File:Logistic-curve.svg" target="_blank" rel="noopener">Image Source</a></figcaption></figure>
+<p>Logistic regression is similar to a non-linear <a href="https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-history-training#perceptron">perceptron</a> or a neural network without hidden layers. The main difference from other basic models is that logistic regression is easy to interpret and reliable if some statistical properties for the input variables hold. If these statistical properties hold one can produce a very reliable model with very little input data. This makes logistic regression valuable for areas where data are scarce, like the medical and social sciences where logistic regression is used to analyze and interpret results from experiments. Because it is simple and fast it is also used for very large data sets.</p>
+<p>In deep learning, the final layer of a neural network used for classification can often be interpreted as a logistic regression. In this context, one can see a deep learning algorithm as multiple feature learning stages, which then pass their features into a logistic regression that classifies an input.</p>
+<h3><a id="artificial-neural-network"></a>Artificial Neural Network</h3>
+<p>An artificial neural network (1) takes some input data, and (2) transforms this input data by calculating a weighted sum over the inputs and (3) applies a non-linear function to this transformation to calculate an intermediate state. The three steps above constitute what is known as a <a href="#layer">layer</a>, and the transformative function is often referred to as a <a href="#unit">unit</a>. The intermediate states—often termed features—are used as the input into another layer.</p>
+<p>Through repetition of these steps, the artificial neural network learns multiple layers of non-linear features, which it then combines in a final layer to create a prediction.</p>
+<p>The neural network learns by generating an error signal that measures the difference between the predictions of the network and the desired values and then using this error signal to change the weights (or parameters) so that predictions get more accurate.</p>
+<h3><a id="unit"></a>Unit</h3>
+<p>A unit often refers to the <a href="#activation-function">activation function</a> in a layer by which the inputs are transformed via a nonlinear activation function (for example by the <a href="https://en.wikipedia.org/wiki/Logistic_function">logistic sigmoid function</a>). Usually, a unit has several incoming connections and several outgoing connections. However, units can also be more complex, like <a href="https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-sequence-learning#LSTM">long short-term memory (LSTM)</a> units, which have multiple activation functions with a distinct layout of connections to the nonlinear activation functions, or maxout units, which compute the final output over an array of nonlinearly transformed input values. <a href="#pooling">Pooling</a>, <a href="#convolution">convolution</a>, and other input transforming functions are usually not referred to as units.</p>
+<h3><a id="artificial-neuron"></a>Artificial Neuron</h3>
+<p>The term artificial neuron—or most often just neuron—is an equivalent term to <a href="#unit">unit</a>, but implies a close connection to neurobiology and the human brain while deep learning has very little to do with the brain (for example, it is now thought that biological neurons are more similar to entire multilayer perceptrons rather than a single unit in a neural network). The term neuron was encouraged after the last <a href="https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-history-training#ai-winter">AI winter</a> to differentiate the more successful neural network from the failing and abandoned perceptron. However, since the wild successes of deep learning after 2012, the media often picked up on the term “neuron” and sought to explain deep learning as mimicry of the human brain, which is very misleading and potentially dangerous for the perception of the field of deep learning. Now the term neuron is discouraged and the more descriptive term unit should be used instead.</p>
+<h3><a id="activation-function"></a>Activation Function</h3>
+<p>An activation function takes in weighted data (matrix multiplication between input data and weights) and outputs a non-linear transformation of the data. For example, <img src="//s0.wp.com/latex.php?latex=output+%3D+max%280%2Cweighted_data%29&#038;bg=ffffff&#038;fg=000&#038;s=0" alt="output = max(0,weighted_data)" title="output = max(0,weighted_data)" class="latex" /> is the <a href="https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-history-training#rectified-linear-function">rectified linear activation function</a> (essentially set all negative values to zero). The difference between units and activation functions is that units can be more complex, that is, a unit can have multiple activation functions (for example <a href="https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-sequence-learning#LSTM">LSTM</a> units) or a slightly more complex structure (for example maxout units).</p>
+<p>The difference between linear and non-linear activation functions can be shown with the relationship of some weighted values: Imagine the four points <em>A1</em>, <em>A2</em>, <em>B1</em> and <em>B2</em>. The pairs <em>A1</em> / <em>A2</em>, and <em>B1</em> / <em>B2</em> lie close to each other, but <em>A1</em> is distant from <em>B1</em> and <em>B2</em>, and vice versa; the same for <em>A2</em>.</p>
+<p>With a linear transformation the relationship between pairs might change. For example <em>A1</em> and <em>A2</em> might be far apart, but this implies that <em>B1</em> and <em>B2</em> are also far apart. The distance between the pairs might shrink, but if it does, then both <em>B1</em> and <em>B2</em> will be close to <em>A1</em> and <em>A2</em> at the same time. We can apply many linear transformations, but the relationship between <em>A1</em> / <em>A2</em> and <em>B1</em> / <em>B2</em> will always be similar.</p>
+<p>In contrast, with a non-linear activation function we can increase the distance between <em>A1</em> and <em>A2</em> while we <em>decrease</em> the distance between <em>B1</em> and <em>B2</em>. We can make <em>B1</em> close to <em>A1</em>, but <em>B2</em> distant from <em>A1</em>. By applying non-linear functions, we create new relationships between the points. With every new non-linear transformation we can increase the complexity of the relationships. In deep learning, using non-linear activation functions creates increasingly complex features with every layer.</p>
+<p>In contrast, the features of 1000 layers of pure linear transformations can be reproduced by a single layer (because a chain of matrix multiplication can always be represented by a single matrix multiplication). This is why non-linear activation functions are so important in deep learning.</p>
+<h3><a id="layer"></a>Layer</h3>
+<p>A layer is the highest-level building block in deep learning. A layer is a container that usually receives weighted input, transforms it with a set of mostly non-linear functions and then passes these values as output to the next layer. A layer is usually uniform, that is it only contains one type of activation function, <a href="#pooling">pooling</a>, <a href="#convolution">convolution</a> etc. so that it can be easily compared to other parts of the network. The first and last layers in a network are called input and output layers, respectively, and all layers in between are called hidden layers.</p>
+<h2>Convolutional Deep Learning</h2>
+<h3><a id="convolution"></a>Convolution</h3>
+<p>Convolution is a mathematical operation which describes a rule of how to mix two functions or pieces of information: (1) The feature map (or input data) and (2) the convolution kernel mix together to form (3) a transformed feature map. Convolution is often interpreted as a filter, where the kernel filters the feature map for information of a certain kind (for example one kernel might filter for edges and discard other information).</p>
+<figure id="attachment_6069" aria-labelledby="figcaption_attachment_6069" class="wp-caption alignright" style="width: 388px"><img class="size-full wp-image-6069" src="/wp-content/uploads/2015/11/convolution.png" alt="Figure 2: Convolution of an image with an edge detector convolution kernel." width="388" height="150" srcset="https://devblogs.nvidia.com/wp-content/uploads/2015/11/convolution.png 388w, https://devblogs.nvidia.com/wp-content/uploads/2015/11/convolution-300x116.png 300w, https://devblogs.nvidia.com/wp-content/uploads/2015/11/convolution-160x62.png 160w" sizes="(max-width: 388px) 100vw, 388px" /><figcaption id="figcaption_attachment_6069" class="wp-caption-text">Figure 2: Convolution of an image with an edge detector convolution kernel. Sources: <a href="https://en.wikipedia.org/wiki/File:Vd-Orig.png">1</a> <a href="https://en.wikipedia.org/wiki/File:Vd-Edge3.png">2</a>.</figcaption></figure>
+<p>Convolution is important in physics and mathematics as it defines a bridge between the spatial and time domains (pixel with intensity 147 at position (0,30)) and the frequency domain (amplitude of 0.3, at 30Hz, with 60-degree phase) through the convolution theorem. This bridge is defined by the use of Fourier transforms: When you use a Fourier transform on both the kernel and the feature map, then the convolution operation is simplified significantly (integration becomes mere multiplication). Some of the fastest GPU implementations of convolutions (for example some implementations in the <a href="https://devblogs.nvidia.com/parallelforall/accelerate-machine-learning-cudnn-deep-neural-network-library/">NVIDIA cuDNN</a> library) currently make use of Fourier transforms.</p>
+<figure id="attachment_6070" aria-labelledby="figcaption_attachment_6070" class="wp-caption aligncenter" style="width: 526px"><img class="size-full wp-image-6070" src="/wp-content/uploads/2015/11/Convolution_schematic.gif" alt="Convolution sliding window" width="526" height="384" /><figcaption id="figcaption_attachment_6070" class="wp-caption-text">Figure 3: Calculating convolution by sliding image patches over the entire image. One image patch (yellow) of the original image (green) is multiplied by the kernel (red numbers in the yellow patch), and its sum is written to one feature map pixel (red cell in convolved feature). Image source: <a href="http://deeplearning.stanford.edu/wiki/index.php/Feature_extraction_using_convolution">1</a>.</figcaption></figure>
+<p>Convolution can describe the diffusion of information, for example, the diffusion that takes place if you put milk into your coffee and do not stir can be accurately modeled by a convolution operation (pixels diffuse towards contours in an image). In quantum mechanics, it describes the probability of a quantum particle being in a certain place when you measure the particle’s position (average probability for a pixel’s position is highest at contours). In probability theory, it describes cross-correlation, which is the degree of similarity for two sequences that overlap (similarity high if the pixels of a feature (e.g. nose) overlap in an image (e.g. face)). In statistics, it describes a weighted moving average over a normalized sequence of input (large weights for contours, small weights for everything else). Many other interpretations exist.</p>
+<p>While it is unknown which interpretation of convolution is correct for deep learning, the cross-correlation interpretation is currently the most useful: convolutional filters can be interpreted as feature detectors, that is, the input (feature map) is filtered for a certain feature (the kernel) and the output is large if the feature is detected in the image. This is exactly how you interpret cross-correlation for an image.</p>
+<figure id="attachment_6071" aria-labelledby="figcaption_attachment_6071" class="wp-caption aligncenter" style="width: 611px"><img class="size-full wp-image-6071" src="/wp-content/uploads/2015/11/crosscorrelation_Example.png" alt="Cross-correlation Example" width="611" height="232" srcset="https://devblogs.nvidia.com/wp-content/uploads/2015/11/crosscorrelation_Example.png 611w, https://devblogs.nvidia.com/wp-content/uploads/2015/11/crosscorrelation_Example-300x114.png 300w, https://devblogs.nvidia.com/wp-content/uploads/2015/11/crosscorrelation_Example-500x190.png 500w, https://devblogs.nvidia.com/wp-content/uploads/2015/11/crosscorrelation_Example-160x61.png 160w" sizes="(max-width: 611px) 100vw, 611px" /><figcaption id="figcaption_attachment_6071" class="wp-caption-text">Figure 4: Cross-correlation for an image. Convolution can be transformed to cross-correlation by reversing the kernel (upside-down image). The kernel can then be interpreted as a feature detector where a detected feature results in large outputs (white) and small outputs if no feature is present (black). Images are taken from <a href="http://www.dspguide.com/swsmith.htm">Steven Smith</a>’s excellent <a href="http://www.dspguide.com/pdfbook.htm">free online book about digital signal processing</a>.</figcaption></figure>
+<p>Additional material: <a href="http://timdettmers.com/2015/03/26/convolution-deep-learning/">Understanding Convolution in Deep Learning</a></p>
+<h3><a id="pooling"></a>Pooling / Subsampling</h3>
+<p>Pooling is a procedure that takes input over a certain area and reduces that to a single value (subsampling). In <a href="#convolutional-neural-networks">convolutional neural networks</a>, this concentration of information has the useful property that outgoing connections usually receive similar information (the information is “funneled” into the right place for the input feature map of the next convolutional layer). This provides basic invariance to rotations and translations. For example, if the face on an image patch is not in the center of the image but slightly translated, it should still work fine because the information is funneled into the right place by the pooling operation so that the convolutional filters can detect the face.</p>
+<p>The larger the size of the pooling area, the more information is condensed, which leads to slim networks that fit more easily into GPU memory. However, if the pooling area is too large, too much information is thrown away and predictive performance decreases.</p>
+<p>Additional material: <a href="https://www.youtube.com/watch?v=I-JKxcpbRT4">Neural networks [9.5]: Computer vision &#8211; pooling and subsampling</a></p>
+<h3><a id="convolutional-neural-network"></a>Convolutional Neural Network (CNN)</h3>
+<p>A convolutional neural network, or preferably convolutional network or convolutional net (the term neural is misleading; see also <a href="#artificial-neuron">artificial neuron</a>), uses convolutional <a href="#layer">layers</a> (see <a href="#convolution">convolution</a>) that filter inputs for useful information. These convolutional layers have parameters that are learned so that these filters are adjusted automatically to extract the most useful information for the task at hand (see Feature Learning). For example, in a general object recognition task it might be most useful to filter information about the shape of an object (objects usually have very different shapes) while for a bird recognition task it might be more suitable to extract information about the color of the bird (most birds have a similar shape, but different colors; here color is more useful to distinguish between birds). Convolutional networks adjust automatically to find the best feature for these tasks.</p>
+<p>Usually, multiple convolutional layers are used that filter images for more and more abstract information after each layer (see hierarchical features).</p>
+<p>Convolutional networks usually also use pooling layers (see <a href="#pooling">pooling</a>) for limited translation and rotation invariance (detect the object even if it appears at some unusual place). Pooling also reduces the memory consumption and thus allows for the usage of more convolutional layers.</p>
+<p>More recent convolutional networks use inception modules (see <a href="#inception">inception</a>) which use 1&#215;1 convolutional kernels to reduce the memory consumption further while speeding up the computation (and thus training).</p>
+<figure id="attachment_6072" aria-labelledby="figcaption_attachment_6072" class="wp-caption aligncenter" style="width: 560px"><img class="size-full wp-image-6072" src="/wp-content/uploads/2015/11/fig1.png" alt="Convolutional Neural Network" width="560" height="253" srcset="https://devblogs.nvidia.com/wp-content/uploads/2015/11/fig1.png 560w, https://devblogs.nvidia.com/wp-content/uploads/2015/11/fig1-300x136.png 300w, https://devblogs.nvidia.com/wp-content/uploads/2015/11/fig1-500x226.png 500w, https://devblogs.nvidia.com/wp-content/uploads/2015/11/fig1-160x72.png 160w" sizes="(max-width: 560px) 100vw, 560px" /><figcaption id="figcaption_attachment_6072" class="wp-caption-text">Figure 5: An image of a traffic sign is filtered by 4 5&#215;5 convolutional kernels which create 4 feature maps, these feature maps are subsampled by max pooling. The next layer applies 10 5&#215;5 convolutional kernels to these subsampled images and again we pool the feature maps. The final layer is a fully connected layer where all generated features are combined and used in the classifier (essentially logistic regression). Image by <a href="http://parse.ele.tue.nl/mpeemen">Maurice Peemen</a>.</figcaption></figure>
+<p>Additional material: <a href="https://www.youtube.com/playlist?list=PLnnr1O8OWc6YLZzLoHzX2q5c2wWMOIUZy">Coursera: Neural Networks for Machine Learning: Object Recognition with Neural Nets</a>.</p>
+<h3><a id="inception"></a>Inception</h3>
+<p>Inception modules in <a href="#convolutional-neural-network">convolutional networks</a> were designed to allow for deeper and larger <a href="#convolution">convolution</a>al <a href="#layer">layers</a> while at the same time allowing for more efficient computation. This is done by using 1&#215;1 convolutions with small feature map size, for example, 192 28&#215;28 sized feature maps can be reduced to 64 28&#215;28 feature maps through 64 1&#215;1 convolutions. Because of the reduced size, these 1&#215;1 convolutions can be followed up with larger convolutions of size 3&#215;3 and 5&#215;5. In addition to 1&#215;1 convolution, max pooling may also be used to reduce dimensionality.</p>
+<p>In the output of an inception module, all the large convolutions are concatenated into a big feature map which is then fed into the next layer (or inception module).</p>
+<p>Additional material: <a href="http://www.cv-foundation.org/openaccess/content_cvpr_2015/papers/Szegedy_Going_Deeper_With_2015_CVPR_paper.pdf">Going Deeper with Convolutions</a></p>
+<h2>Conclusion to Part 1</h2>
+<p>This concludes part one of this crash course on deep learning. Please check back soon for the next two parts of the series. In <a href="https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-history-training/">part 2</a>, I’ll provide a brief historical overview followed by an introduction to training deep neural networks.</p>
+<p>Meanwhile, you might be interested in learning about <a href="https://devblogs.nvidia.com/parallelforall/cudnn-v2-higher-performance-deep-learning-gpus/">cuDNN</a>, <a href="https://devblogs.nvidia.com/parallelforall/easy-multi-gpu-deep-learning-digits-2/">DIGITS</a>, <a href="https://devblogs.nvidia.com/parallelforall/deep-learning-computer-vision-caffe-cudnn/">Computer Vision with Caffe</a>, <a href="https://devblogs.nvidia.com/parallelforall/understanding-natural-language-deep-neural-networks-using-torch/">Natural Language Processing with Torch</a>, <a href="https://devblogs.nvidia.com/parallelforall/introduction-neural-machine-translation-with-gpus/">Neural Machine Translation</a>, the <a href="https://devblogs.nvidia.com/parallelforall/mocha-jl-deep-learning-julia/">Mocha.jl</a> deep learning framework for Julia, or other <a href="https://devblogs.nvidia.com/parallelforall/tag/deep-learning">Parallel Forall posts on deep learning</a>.</p>
+
+                    <div class="entry-content-comments-link">
+                        <i class="fa fa-comment" aria-hidden="true"></i>
+                        <a href="https://devblogs.nvidia.com/deep-learning-nutshell-core-concepts/#comments">
+                          <span class="dsq-postid" data-dsqidentifier="6063 https://devblogs.nvidia.com/parallelforall/?p=6063">15 Comments</span>                        </a>
+                    </div>
+
+                    <div class="entry-content-author">
+                        <div class="caption">About the Authors</div>
+                      
+        <div class="media author-info">
+            <div class="author-media-left media-left">
+              <img alt='' src='https://secure.gravatar.com/avatar/a2403083d31517f7ad848c67a51cf2d2?s=116&#038;d=retro&#038;r=g' srcset='https://secure.gravatar.com/avatar/a2403083d31517f7ad848c67a51cf2d2?s=232&#038;d=retro&#038;r=g 2x' class='avatar img-responsive avatar-116 photo' height='116' width='116' />            </div>
+            <div class="author-media-body media-body">
+                <b>About Tim Dettmers</b>
+                <br/>
+
+              Tim Dettmers is a masters student in informatics at the University of Lugano where he works on deep learning research. Before that he studied applied mathematics and worked for three years as a software engineer in the automation industry. He runs a <a href="http://timdettmers.com/">blog about deep learning</a> and takes part in Kaggle data science competitions where he has reached a world rank of 63.                                <br/>
+                  <a class="author-twitter-link"
+                     href="https://twitter.com/intent/user?screen_name=Tim_Dettmers">Follow
+                      @Tim_Dettmers                      on Twitter</a>
+                                              <div id="author-link">
+                      <a href="https://devblogs.nvidia.com/author/tdettmers/"
+                         rel="author">
+                        View all posts by Tim Dettmers <i class="fa fa-angle-double-right" aria-hidden="true"></i>                      </a>
+                  </div>
+                          </div>
+
+                  </div>
+
+                        </div>
+                </div>
+            </article>
+        
+    </div>
+</div>
+
+<div class="entry-content-share" id="entry-content-share">
+    <div class="container">
+        <div class="row">
+            <div class="entry-content-share-count">
+              <i class="fa fa-share-alt" aria-hidden="true"></i>
+              <div class="sharethis-inline-share-buttons"></div>            </div>
+        </div>
+    </div>
+</div>
+
+<div class="entry-content-related">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 related-posts-title">Related posts</div>
+        </div>
+
+      <div class="row"><div class="col-md-6 col-sm-6 col-xs-12 col-md-6-pd"><div class="media related-posts-content">
+              <div class="media-body">
+                <div class="wrap-home-posts">
+                  <div class="home-posts-title">
+                    <a href="https://devblogs.nvidia.com/deep-learning-nutshell-history-training/">Deep Learning in a Nutshell: History and Training</a>
+                  </div>
+                  <div class="home-posts-author">By <a href="https://devblogs.nvidia.com/author/tdettmers/" title="Posts by Tim Dettmers" class="author url fn" rel="author">Tim Dettmers</a> | <a href="https://devblogs.nvidia.com/deep-learning-nutshell-history-training/" title="1:27 pm" rel="bookmark"><time class="entry-date" datetime="1:27 pm" pubdate>December 16, 2015 </time></a>      </div>
+             </div>
+           </div>
+           <div class="media-right"><img height="110" width="111" src="https://devblogs.nvidia.com/wp-content/uploads/2012/10/CUDA_Cube_1K-111x110.jpg" alt="CUDA_Cube_1K" /></div>
+         </div></div><div class="col-md-6 col-sm-6 col-xs-12 col-md-6-pd"><div class="media related-posts-content">
+              <div class="media-body">
+                <div class="wrap-home-posts">
+                  <div class="home-posts-title">
+                    <a href="https://devblogs.nvidia.com/deep-learning-nutshell-sequence-learning/">Deep Learning in a Nutshell: Sequence Learning</a>
+                  </div>
+                  <div class="home-posts-author">By <a href="https://devblogs.nvidia.com/author/tdettmers/" title="Posts by Tim Dettmers" class="author url fn" rel="author">Tim Dettmers</a> | <a href="https://devblogs.nvidia.com/deep-learning-nutshell-sequence-learning/" title="10:26 pm" rel="bookmark"><time class="entry-date" datetime="10:26 pm" pubdate>March 7, 2016 </time></a>      </div>
+             </div>
+           </div>
+           <div class="media-right"><img height="110" width="110" src="https://devblogs.nvidia.com/wp-content/uploads/2017/01/cuda_ai_cube-110x110.jpg" alt="CUDA AI Cube" /></div>
+         </div></div></div><div class="row"><div class="col-md-6 col-sm-6 col-xs-12 col-md-6-pd"><div class="media related-posts-content">
+              <div class="media-body">
+                <div class="wrap-home-posts">
+                  <div class="home-posts-title">
+                    <a href="https://devblogs.nvidia.com/deep-learning-computer-vision-caffe-cudnn/">Deep Learning for Computer Vision with Caffe and cuDNN</a>
+                  </div>
+                  <div class="home-posts-author">By <a href="https://devblogs.nvidia.com/author/eshelhammer/" title="Posts by Evan Shelhamer" class="author url fn" rel="author">Evan Shelhamer</a> | <a href="https://devblogs.nvidia.com/deep-learning-computer-vision-caffe-cudnn/" title="7:50 pm" rel="bookmark"><time class="entry-date" datetime="7:50 pm" pubdate>October 15, 2014 </time></a>      </div>
+             </div>
+           </div>
+           <div class="media-right"><img height="110" width="171" src="https://devblogs.nvidia.com/wp-content/uploads/2014/09/cuDNN_logo_black_on_white_179x115.png" alt="cuDNN_logo_black_on_white_179x115" /></div>
+         </div></div><div class="col-md-6 col-sm-6 col-xs-12 col-md-6-pd"><div class="media related-posts-content">
+              <div class="media-body">
+                <div class="wrap-home-posts">
+                  <div class="home-posts-title">
+                    <a href="https://devblogs.nvidia.com/deep-learning-nutshell-reinforcement-learning/">Deep Learning in a Nutshell: Reinforcement Learning</a>
+                  </div>
+                  <div class="home-posts-author">By <a href="https://devblogs.nvidia.com/author/tdettmers/" title="Posts by Tim Dettmers" class="author url fn" rel="author">Tim Dettmers</a> | <a href="https://devblogs.nvidia.com/deep-learning-nutshell-reinforcement-learning/" title="3:45 am" rel="bookmark"><time class="entry-date" datetime="3:45 am" pubdate>September 8, 2016 </time></a>      </div>
+             </div>
+           </div>
+           <div class="media-right"><img height="110" width="113" src="https://devblogs.nvidia.com/wp-content/uploads/2016/09/image00-113x110.png" alt="Figure 1: Value iteration constructs the value function over all states over time. Here each square is a state: S is the start state, G the goal state, T squares are traps, and black squares cannot be entered. In value iteration we initialize the rewards (traps and goal state) and then these reward values spread over time until an equilibrium is reached. Depending on the penalty value on traps and the reward value for the goal different solution patterns might emerge; the last two grids show such solution states." /></div>
+         </div></div></div>    </div>
+</div>
+
+<div class="entry-content-comments" id="entry-content-comments">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 related-posts-comments">Comments</div>
+        </div>
+        <div class="row" id="pf-disqus-thread">
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            
+<div id="disqus_thread">
+            <div id="dsq-content">
+
+
+            <ul id="dsq-comments">
+                    <li class="comment even thread-even depth-1" id="dsq-comment-1193">
+        <div id="dsq-comment-header-1193" class="dsq-comment-header">
+            <cite id="dsq-cite-1193">
+                <a id="dsq-author-user-1193" href="http://www.ad.net" target="_blank" rel="nofollow">ray</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-1193" class="dsq-comment-body">
+            <div id="dsq-comment-message-1193" class="dsq-comment-message"><p>great intro. Keep it up!!</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment odd alt depth-2" id="dsq-comment-2080">
+        <div id="dsq-comment-header-2080" class="dsq-comment-header">
+            <cite id="dsq-cite-2080">
+                <a id="dsq-author-user-2080" href="https://www.clippp.com/feliciagraham/anniversary-wedding-quotes" target="_blank" rel="nofollow">Anniversary Wedding Quotes</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-2080" class="dsq-comment-body">
+            <div id="dsq-comment-message-2080" class="dsq-comment-message"><p>I think the most beautiful idea is that why a non-linear transform is needed to make a layer..</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even depth-2" id="dsq-comment-2456">
+        <div id="dsq-comment-header-2456" class="dsq-comment-header">
+            <cite id="dsq-cite-2456">
+                <a id="dsq-author-user-2456" href="https://thecedrus.com/tag/lovequotes" target="_blank" rel="nofollow">love quotes</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-2456" class="dsq-comment-body">
+            <div id="dsq-comment-message-2456" class="dsq-comment-message"><p>In Chrome, Ctrl+p and select &#8220;Simplify page&#8221;. It looks perfect to me.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment odd alt thread-odd thread-alt depth-1" id="dsq-comment-1234">
+        <div id="dsq-comment-header-1234" class="dsq-comment-header">
+            <cite id="dsq-cite-1234">
+                <span id="dsq-author-user-1234">Daniele Marzorati</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-1234" class="dsq-comment-body">
+            <div id="dsq-comment-message-1234" class="dsq-comment-message"><p>Do you have a printable version of this course?</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment even depth-2" id="dsq-comment-1611">
+        <div id="dsq-comment-header-1611" class="dsq-comment-header">
+            <cite id="dsq-cite-1611">
+                <span id="dsq-author-user-1611">Miguel Morales</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-1611" class="dsq-comment-body">
+            <div id="dsq-comment-message-1611" class="dsq-comment-message"><p>In Chrome, Ctrl+p and select &#8220;Simplify page&#8221;. It looks perfect to me.</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment odd alt depth-3" id="dsq-comment-2370">
+        <div id="dsq-comment-header-2370" class="dsq-comment-header">
+            <cite id="dsq-cite-2370">
+                <a id="dsq-author-user-2370" href="https://printablecalendar365.com/free-printable-september-2017-calendar-holidays/" target="_blank" rel="nofollow">september 2017</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-2370" class="dsq-comment-body">
+            <div id="dsq-comment-message-2370" class="dsq-comment-message"><p>Exactly!</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment even thread-even depth-1" id="dsq-comment-1268">
+        <div id="dsq-comment-header-1268" class="dsq-comment-header">
+            <cite id="dsq-cite-1268">
+                <span id="dsq-author-user-1268">Antonio Dourado</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-1268" class="dsq-comment-body">
+            <div id="dsq-comment-message-1268" class="dsq-comment-message"><p>Hi there. Could you make a printable PDF version of your posts?<br />
+Thank you so much and cheers from Brazil.</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment odd alt depth-2" id="dsq-comment-1612">
+        <div id="dsq-comment-header-1612" class="dsq-comment-header">
+            <cite id="dsq-cite-1612">
+                <span id="dsq-author-user-1612">Miguel Morales</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-1612" class="dsq-comment-body">
+            <div id="dsq-comment-message-1612" class="dsq-comment-message"><p>It seems straight forward to get it in Chrome: </p>
+<p>Ctrl+p and select &#8220;Simplify page&#8221;.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-1367">
+        <div id="dsq-comment-header-1367" class="dsq-comment-header">
+            <cite id="dsq-cite-1367">
+                <span id="dsq-author-user-1367">alexyangfox</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-1367" class="dsq-comment-body">
+            <div id="dsq-comment-message-1367" class="dsq-comment-message"><p>Great Intro! Thanks&#8230; I think the most beautiful idea is that why a non-linear transform is needed to make a layer..</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-1369">
+        <div id="dsq-comment-header-1369" class="dsq-comment-header">
+            <cite id="dsq-cite-1369">
+                <span id="dsq-author-user-1369">Rushikesh Tade</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-1369" class="dsq-comment-body">
+            <div id="dsq-comment-message-1369" class="dsq-comment-message"><p>Nice and Easy to Understand .</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-1712">
+        <div id="dsq-comment-header-1712" class="dsq-comment-header">
+            <cite id="dsq-cite-1712">
+                <a id="dsq-author-user-1712" href="http://carloscerrato.com/" target="_blank" rel="nofollow">Carlos R. Cerrato E.</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-1712" class="dsq-comment-body">
+            <div id="dsq-comment-message-1712" class="dsq-comment-message"><p>Wow! Pretty good summary! I had to go through several sources to find what this articles describes really well.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt thread-even depth-1" id="dsq-comment-1948">
+        <div id="dsq-comment-header-1948" class="dsq-comment-header">
+            <cite id="dsq-cite-1948">
+                <span id="dsq-author-user-1948">Khalid Tahraoui</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-1948" class="dsq-comment-body">
+            <div id="dsq-comment-message-1948" class="dsq-comment-message"><p>Is there a pdf version of all parts in one file ?</p>
+</div>
+        </div>
+
+    <ul class="children">
+    <li class="comment even depth-2" id="dsq-comment-2011">
+        <div id="dsq-comment-header-2011" class="dsq-comment-header">
+            <cite id="dsq-cite-2011">
+                <a id="dsq-author-user-2011" href="https://vehiclepad.com/categories/view/fd3a866a922df74436e899a94b259aed27311d86/infiniti-m56x-2013.html" target="_blank" rel="nofollow">Infiniti M56x</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-2011" class="dsq-comment-body">
+            <div id="dsq-comment-message-2011" class="dsq-comment-message"><p>Do you have a printable version of this course?</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+    <li class="comment odd alt depth-2" id="dsq-comment-2081">
+        <div id="dsq-comment-header-2081" class="dsq-comment-header">
+            <cite id="dsq-cite-2081">
+                <a id="dsq-author-user-2081" href="https://www.clippp.com/feliciagraham/anniversary-wedding-quotes" target="_blank" rel="nofollow">Anniversary Wedding Quotes</a>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-2081" class="dsq-comment-body">
+            <div id="dsq-comment-message-2081" class="dsq-comment-message"><p>I think the most beautiful idea is that why a non-linear transform is needed to make a layer&#8230;</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+    <li class="comment even thread-odd thread-alt depth-1" id="dsq-comment-2710">
+        <div id="dsq-comment-header-2710" class="dsq-comment-header">
+            <cite id="dsq-cite-2710">
+                <span id="dsq-author-user-2710">Sameed khan</span>
+            </cite>
+        </div>
+        <div id="dsq-comment-body-2710" class="dsq-comment-body">
+            <div id="dsq-comment-message-2710" class="dsq-comment-message"><p>Thanks for this gentle introduction to deep learning.</p>
+</div>
+        </div>
+
+    </li><!-- #comment-## -->
+            </ul>
+
+
+        </div>
+
+    </div>
+
+<script type="text/javascript">
+var disqus_url = 'https://devblogs.nvidia.com/deep-learning-nutshell-core-concepts/';
+var disqus_identifier = '6063 https://devblogs.nvidia.com/parallelforall/?p=6063';
+var disqus_container_id = 'disqus_thread';
+var disqus_shortname = 'nvparallelforall';
+var disqus_title = "Deep Learning in a Nutshell: Core Concepts";
+var disqus_config_custom = window.disqus_config;
+var disqus_config = function () {
+    /*
+    All currently supported events:
+    onReady: fires when everything is ready,
+    onNewComment: fires when a new comment is posted,
+    onIdentify: fires when user is authenticated
+    */
+    
+    
+    this.language = '';
+        this.callbacks.onReady.push(function () {
+
+        // sync comments in the background so we don't block the page
+        var script = document.createElement('script');
+        script.async = true;
+        script.src = '?cf_action=sync_comments&post_id=6063';
+
+        var firstScript = document.getElementsByTagName('script')[0];
+        firstScript.parentNode.insertBefore(script, firstScript);
+    });
+    
+    if (disqus_config_custom) {
+        disqus_config_custom.call(this);
+    }
+};
+
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+          </div>
+        </div>
+    </div>
+</div>
+
+
+	<!--wp code prettify-->
+	<script type="text/javascript">
+	function $(id) {return !id ? null : document.getElementById(id);}
+
+	loadPrettifyCss = function () {
+		if(!$('prettify_css')) {
+			css = document.createElement('link');
+			css.id = 'prettify_css';
+			css.type = 'text/css';
+			css.rel = 'stylesheet';
+			css.href = 'https://devblogs.nvidia.com/wp-content/plugins/wp-code-prettify/css/prettify.css';
+			var headNode = document.getElementsByTagName("head")[0];
+			headNode.appendChild(css);
+		} else {
+			$('prettify_css').href = 'https://devblogs.nvidia.com/wp-content/plugins/wp-code-prettify/css/prettify.css';
+		}
+
+		if(!$('prettify_custom')) {
+			css = document.createElement('style');
+			css.id = 'prettify_custom';
+			css.type = 'text/css';
+			css.rel = 'stylesheet';
+			css.innerHTML = 'pre.prettyprint { max-height: 500px; white-space: pre; word-wrap: normal; overflow: auto; background-color: #f8f8f8;border-radius: 3px; } pre.prettyprint[title]:before { float: right; border: 1px solid #ccc; border-radius: 3px; background: #ddd; padding: 10px; content: attr(title);  font: 13px "Trebuchet MS", "Helvetica Neue", Helvetica, Arial, sans-serif; }';
+			var headNode = document.getElementsByTagName("head")[0];
+			headNode.appendChild(css);
+		} else {
+			$('prettify_css').innerHTML = 'pre.prettyprint { max-height: 500px; white-space: pre; word-wrap: normal; overflow: auto; background-color: #f8f8f8;border-radius: 3px; } pre.prettyprint[title]:before { float: right; border: 1px solid #ccc; border-radius: 3px; background: #ddd; padding: 10px; content: attr(title);  font: 13px "Trebuchet MS", "Helvetica Neue", Helvetica, Arial, sans-serif; }';
+		}
+	}
+	</script>
+	<script type="text/javascript">
+		loadPrettifyCss();
+	</script>
+
+	<script type="text/javascript" src="https://devblogs.nvidia.com/wp-content/plugins/wp-code-prettify/js/prettify.js"></script>
+	<script type="text/javascript">
+		function wpCodePrettifyOnLoad(func){
+			var wpCodePrettifyOldOnLoad = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func
+			} else {
+				window.onload = function () {
+					wpCodePrettifyOldOnLoad();
+					func()
+				}
+			}
+		}
+
+		wpCodePrettifyOnLoad(function(){prettyPrint();});
+	</script>
+	<!--//wp code prettify-->
+	<script type="text/javascript" src="https://devblogs.nvidia.com/wp-content/plugins/wp-code-prettify/js/lang-matlab.js"></script>
+</div>
+
+</div>
+
+</div>
+<footer class="cuda-footer">
+    <div class="footer-boilerplate">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                    <div class="logo-footer"></div>
+                </div>
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    <div class="boilerplate clearfix">
+                        <div class="copyright">
+                          Copyright © 2018 NVIDIA Corporation                        </div>
+                        <a class="legal-info-link"
+                           href="http://www.nvidia.com/object/legal_info.html">Legal Information</a>
+                        <a class="privacy-link"
+                           href="http://www.nvidia.com/object/privacy_policy.html">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer></div>
+
+        <script type="text/javascript">
+        // <![CDATA[
+        var disqus_shortname = 'nvparallelforall';
+        (function () {
+            var nodes = document.getElementsByTagName('span');
+            for (var i = 0, url; i < nodes.length; i++) {
+                if (nodes[i].className.indexOf('dsq-postid') != -1 && nodes[i].parentNode.tagName == 'A') {
+                    nodes[i].parentNode.setAttribute('data-disqus-identifier', nodes[i].getAttribute('data-dsqidentifier'));
+                    url = nodes[i].parentNode.href.split('#', 1);
+                    if (url.length == 1) { url = url[0]; }
+                    else { url = url[1]; }
+                    nodes[i].parentNode.href = url + '#disqus_thread';
+                }
+            }
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+        // ]]>
+        </script>
+        <script>_satellite.pageBottom();</script> 	<div id="sidr-left" class="sidebar-container sidr" role="complementary">
+					<div class="sidr-toggle"><a class="sidr-left-link" href="#sidr-left">Close</a></div>
+					<div class="widget-area"><aside id="nav_menu-4" class="widget widget_nav_menu"><h3 class="widget-title">Parallel Forall</h3><div class="menu-main-menu-container"><ul id="menu-main-menu" class="menu"><li id="menu-item-3130" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3130"><a href="https://devblogs.nvidia.com/category/features/">Features</a></li>
+</ul></div></aside><aside id="search-3" class="widget widget_search"><form role="search" method="get" class="searchform" id="searchform" action="https://devblogs.nvidia.com/">
+  <div><label class="screen-reader-text" for="s">Search for:</label>
+    <input type="text" value="" placeholder="Search..." name="s" id="s" />
+    <span class="fa fa-search visible-xs visible-sm"></span>
+    <input type="submit" id="searchsubmit" value="Search" />
+  </div>
+</form></aside><aside id="text-2" class="widget widget_text"><h3 class="widget-title">Accelerated Computing</h3>			<div class="textwidget"><ul class="nav navbar-nav navbar-margin navbar-right navbar-margin-media login-nav">
+  <li><a href="https://developer.nvidia.com/accelerated-computing">Accelerated Computing</a></li>
+  <li><a href="https://developer.nvidia.com/accelerated-computing-toolkit">Downloads</a></li>
+  <li><a href="https://developer.nvidia.com/accelerated-computing-training">Training</a></li>
+  <li><a href="https://developer.nvidia.com/tools-ecosystem">Ecosystem</a></li>
+<li><a href="https://devtalk.nvidia.com">Forums</a></li>
+    <li class="cuda-program-link">
+        <a href="https://developer.nvidia.com/accelerated-computing-developer"><i class="fa fa-lock fa-fw"></i> Register Now</a>
+    </li>
+    <li>
+        <a href="https://developer.nvidia.com/user">Login</a>
+    </li>
+</ul></div>
+		</aside> 		</div><!-- .widget-area -->
+				</div><!-- #sidr-left -->	<div style="display:none">
+	<div class="grofile-hash-map-a2403083d31517f7ad848c67a51cf2d2">
+	</div>
+	</div>
+<script type='text/javascript' src='https://devblogs.nvidia.com/wp-content/plugins/easy-load-more/assets/js/frontend.min.js?ver=1.0.0'></script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=201810'></script>
+<script type='text/javascript' src='https://devblogs.nvidia.com/wp-content/plugins/wp-sidr/js/sidr-init.js'></script>
+<script type='text/javascript' src='https://secure.gravatar.com/js/gprofiles.js?ver=2018Maraa'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://devblogs.nvidia.com/wp-content/plugins/jetpack/modules/wpgroho.js?ver=4.9.1'></script>
+<script type='text/javascript' src='https://devblogs.nvidia.com/wp-includes/js/comment-reply.min.js?ver=4.9.1'></script>
+<script type='text/javascript' src='https://devblogs.nvidia.com/wp-content/themes/parallel-forall/js/custom-script.js?ver=0.2'></script>
+<script type='text/javascript' src='https://devblogs.nvidia.com/wp-content/themes/parallel-forall/assets/js/ios-orientationchange-fix.js?ver=0.2'></script>
+<script type='text/javascript' src='https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js'></script>
+<script type='text/javascript' src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
+<script type='text/javascript' src='https://devblogs.nvidia.com/wp-content/plugins/jetpack/_inc/build/twitter-timeline.min.js?ver=4.0.0'></script>
+<script type='text/javascript' src='https://devblogs.nvidia.com/wp-includes/js/wp-embed.min.js?ver=4.9.1'></script>
+	<script type="text/javascript">
+		var elm_button_vars = { wrapper: '.all-posts-grid' };
+	</script>
+	<script type='text/javascript' src='https://stats.wp.com/e-201810.js' async defer></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:5.6',blog:'141438771',post:'6063',tz:'-8',srv:'devblogs.nvidia.com'} ]);
+	_stq.push([ 'clickTrackerInit', '141438771', '6063' ]);
+</script>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"a63018bcb3","applicationID":"39867691","transactionName":"MgcDbURTD0dSVkcLXwtNIFpCWw5aHEZaDFcJBw==","queueTime":0,"applicationTime":1360,"atts":"HkAAGwxJHEk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
